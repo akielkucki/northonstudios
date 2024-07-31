@@ -17,13 +17,13 @@ const Header = () => {
       <div className="head">
         <h2><span>JR</span> STUDIOS</h2>
         <ul>
-          <NavLink to={'/'}>HOME</NavLink>
-          <NavLink to={'#services'}>SERVICES</NavLink>
-          <NavLink to={'#projects'}>PROJECTS</NavLink>
-          <NavLink to={'#about-us'}>ABOUT US</NavLink>
-          <NavLink to={'#testimonials'}>TESTIMONIALS</NavLink>
+          <NavLink id='nav_1'>HOME</NavLink>
+          <NavLink id='nav_2'>ABOUT US</NavLink>
+          <NavLink id='nav_3'>SERVICES</NavLink>
+          <NavLink id='nav_4'>PROJECTS</NavLink>
+          <NavLink id='nav_5'>TESTIMONIALS</NavLink>
         </ul>
-        <button>CONTACT US</button>
+        <button id="nav_6">CONTACT US</button>
       </div>
       <div className="banner">
         <div className="main">
