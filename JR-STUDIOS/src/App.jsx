@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
+import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom/client";
 
 // Partials
 import Footer from './components/partials/Footer'
