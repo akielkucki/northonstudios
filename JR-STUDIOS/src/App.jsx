@@ -35,6 +35,23 @@ const App = () => {
     },
 };
 
+useEffect(() => {
+  function scrollToelem(id_,index_,offset_) {
+  document.getElementById(id_).addEventListener("click", () => {
+    var offsetPosition = document.getElementsByTagName('section')[index_].getBoundingClientRect().top - document.body.getBoundingClientRect().top -offset_ ;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });});};
+
+  scrollToelem("nav_1",1,0);
+  scrollToelem("nav_2",2,0);
+  scrollToelem("nav_3",3,0);
+  scrollToelem("nav_4",5,0);
+  scrollToelem("nav_5",6,0);
+  scrollToelem("nav_6",7,0);
+  });
+
   return (
     <ThemeProvider theme={theme}>
     <Router>
