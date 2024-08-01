@@ -35,19 +35,19 @@ const ClientsBanner = () => {
                         <div className="point">
                             <div className="info">
                                 <h3><i className="fa-solid fa-stopwatch"></i> Fast Response</h3>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatibus id modi soluta dolore amet laboriosam voluptas error ducimus officia.</p>
+                                <p>We prioritize quick and efficient communication to ensure your projects stay on track and your concerns are addressed promptly.</p>
                             </div>
                         </div>
                         <div className="point">
                             <div className="info">
                                 <h3><i className="fa-solid fa-globe"></i> World Class Freelancers</h3>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatibus id modi soluta dolore amet laboriosam voluptas error ducimus officia.</p>
+                                <p>Our team comprises highly skilled freelancers from around the globe, each bringing unique expertise to deliver exceptional results.</p>
                             </div>
                         </div>
                         <div className="point">
                             <div className="info">
                                 <h3><i className="fa-solid fa-thumbs-up"></i> Best Quality</h3>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatibus id modi soluta dolore amet laboriosam voluptas error ducimus officia.</p>
+                                <p>We are committed to delivering the highest quality in every project, ensuring that our work consistently meets and exceeds expectations.</p>
                             </div>
                         </div>
                     </div>
