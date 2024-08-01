@@ -1,7 +1,6 @@
 import React from 'react'
 import { FadeText } from "@/components/magicui/fade-text";
 import styled from 'styled-components'
-import { BorderBeam } from "@/components/magicui/border-beam";
 import BlurFade from "@/components/magicui/blur-fade";
 
 const AboutUs = () => {
@@ -37,7 +36,6 @@ const AboutUs = () => {
                             src={'/imgs/logo.png'}
                             alt={`JR-Studios-Logo`}
                         />
-                        <BorderBeam size={250} duration={12} delay={9} />
                     </BlurFade>
                 </div>
                 <div className="info">
@@ -49,7 +47,6 @@ const AboutUs = () => {
                                 show: { transition: { delay: 0.5 } },
                             }}
                             text="JR Studios, your go-to tech agency for all things digital. We specialize in crafting innovative web and app solutions, creating stunning graphic designs, and producing intricate 3D models. Our mission is to turn your ideas into reality, blending creativity with technology to empower brands in the tech age. At JR Studios, it's not just about code—it's about creation. Let's build something extraordinary together!"
-
                         />
                     </p>
                 </div>

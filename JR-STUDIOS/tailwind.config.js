@@ -64,7 +64,6 @@ module.exports = {
       animation: {
         "marquee": "marquee var(--duration) linear infinite",
         "marquee-reverse": "marquee-reverse var(--duration) linear infinite",
-        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         "marquee": {
@@ -74,11 +73,6 @@ module.exports = {
         "marquee-reverse": {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(100%)" },
-        },
-        "border-beam": {
-          "100%": {
-            "offset-distance": "100%",
-          },
         },
       },
     },
