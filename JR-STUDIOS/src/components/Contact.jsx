@@ -55,18 +55,22 @@ const Wrapper = styled.section`
         border-radius: 1rem;
         padding: 3rem 1rem;
 
+        @media (max-width: ${({theme}) => theme.media.mobile}) {
+
+        }
+
         .contact-head {
             display: flex;
             flex-direction: column;
             align-items: center; 
-            gap: 1rem;
+            gap: 1.5rem;
 
             h1 {
                 font-size: 3rem;
                 text-align: center;
 
                 @media (max-width: ${({theme}) => theme.media.tab}) {
-                    font-size: 2.5rem;
+                    font-size: 2.3rem;
                 }
             }
 
@@ -75,13 +79,23 @@ const Wrapper = styled.section`
                 color: gray;
                 width: 60%;
                 text-align: center;
+
+                @media (max-width: ${({theme}) => theme.media.mobile}) {
+                    width: 100%;
+                }
             }
         }
 
         .contact-info {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 1.5rem;
+
+            @media (max-width: ${({theme}) => theme.media.mobile}) {
+            
+            }
 
             a {
                 font-family: Poppins, sans-serif;

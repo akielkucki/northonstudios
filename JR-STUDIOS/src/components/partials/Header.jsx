@@ -1,10 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import { FadeText } from "@/components/magicui/fade-text";
 import Particles from "@/components/magicui/particles";
 import { NavLink } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <Wrapper>
       <Particles
@@ -16,57 +23,60 @@ const Header = () => {
       />
       <div className="head">
         <h2><span>JR</span> STUDIOS</h2>
-        <ul>
-          <NavLink id='nav_1'>HOME</NavLink>
-          <NavLink id='nav_2'>ABOUT US</NavLink>
-          <NavLink id='nav_3'>SERVICES</NavLink>
-          <NavLink id='nav_4'>PROJECTS</NavLink>
-          <NavLink id='nav_5'>TESTIMONIALS</NavLink>
-        </ul>
-        <button id="nav_6">CONTACT US</button>
+        <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <NavLink id='nav_1' onClick={toggleMenu}>HOME</NavLink>
+          <NavLink id='nav_2' onClick={toggleMenu}>ABOUT US</NavLink>
+          <NavLink id='nav_3' onClick={toggleMenu}>SERVICES</NavLink>
+          <NavLink id='nav_4' onClick={toggleMenu}>PROJECTS</NavLink>
+          <NavLink id='nav_5' onClick={toggleMenu}>TESTIMONIALS</NavLink>
+          <button id="nav_6" onClick={toggleMenu}>CONTACT US</button>
+        </nav>
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
       <div className="banner">
         <div className="main">
-        <h4>
-          <FadeText
-            className="text-4xl font-bold dark:text-white"
-            direction="up"
-            framerProps={{
-              show: { transition: { delay: 0 } },
-            }}
-            text="JR STUDIOS"
-          />
-        </h4>
-        <h1>
-          <FadeText
-            className="text-4xl font-bold dark:text-white"
-            direction="up"
-            framerProps={{
-              show: { transition: { delay: 0.3 } },
-            }}
-            text="Empowering Brands In The Tech Age"
-          />
-        </h1>
-        <p>
-          <FadeText
-            className="text-4xl font-bold dark:text-white"
-            direction="up"
-            framerProps={{
-              show: { transition: { delay: 0.5 } },
-            }}
-            text="JR Studios is a software company turns your ideas into code not even just code Its our creation!"
-          />
-        </p>
-        <button>
-          <FadeText
-            className="text-4xl font-bold dark:text-white"
-            direction="up"
-            framerProps={{
-              show: { transition: { delay: 1 } },
-            }}
-            text="INQUIRE"
-          />
-        </button>
+          <h4>
+            <FadeText
+              className="text-4xl font-bold dark:text-white"
+              direction="up"
+              framerProps={{
+                show: { transition: { delay: 0 } },
+              }}
+              text="JR STUDIOS"
+            />
+          </h4>
+          <h1>
+            <FadeText
+              className="text-4xl font-bold dark:text-white"
+              direction="up"
+              framerProps={{
+                show: { transition: { delay: 0.3 } },
+              }}
+              text="Empowering Brands In The Tech Age"
+            />
+          </h1>
+          <p>
+            <FadeText
+              className="text-4xl font-bold dark:text-white"
+              direction="up"
+              framerProps={{
+                show: { transition: { delay: 0.5 } },
+              }}
+              text="JR Studios is a software company turns your ideas into code not even just code Its our creation!"
+            />
+          </p>
+          <a href='mailto:jaundev768@gmail.com'>
+            <FadeText
+              className="text-4xl font-bold dark:text-white"
+              direction="up"
+              framerProps={{
+                show: { transition: { delay: 1 } },
+              }}
+              text="INQUIRE"
+            />
+          </a>
         </div>
       </div>
     </Wrapper>
@@ -76,26 +86,27 @@ const Header = () => {
 const Wrapper = styled.section`
   background: transparent;
   height: 100vh;
-  
+
   .particles {
     width: 100%;
     height: 100vh;
     z-index: -1;
 
     canvas {
-      width: 100%;
+      width: 100% !important;
       height: 100% !important; 
     }
   }
-    
+
   .head {
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
-    background-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    position: fixed;
 
     h2 {
       font-size: 2rem;
@@ -107,14 +118,33 @@ const Wrapper = styled.section`
       }
     }
 
-    ul {
-      border: 1px solid gray;
-      border-radius: 5rem;
-      padding: 5px;
+    .nav-links {
       display: flex;
-      flex-direction: row;
       align-items: center;
       gap: 2.5rem;
+
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem;
+        display: none;
+
+        &.open {
+          display: flex;
+        }
+
+        a,
+        button {
+          width: 100%;
+          text-align: left;
+          padding: 1rem;
+        }
+      }
 
       a {
         font-size: 15px;
@@ -129,18 +159,29 @@ const Wrapper = styled.section`
           color: #9017f5;
         }
       }
+
+      button {
+        font-family: Poppins, sans-serif;
+        border: 1px solid #9017f5;
+        border-radius: 5rem;
+        padding: 0.8rem 1rem;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #9017f5;
+        }
+      }
     }
 
-    button {
-      font-family: Poppins, sans-serif;
-      border: 1px solid #9017f5;
-      border-radius: 5rem;
-      padding: 0.8rem 1rem;
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
       color: #fff;
-      transition: all 0.3s ease-in-out;
-    
-      &:hover {
-        background-color: #9017f5;
+
+      @media (max-width: 768px) {
+        display: block;
       }
     }
   }
@@ -163,8 +204,8 @@ const Wrapper = styled.section`
       font-family: Poppins, sans-serif;
       color: #fff;
 
-      @media (max-width: ${({theme}) => theme.media.tab}) {
-          width: 90%;
+      @media (max-width: ${({ theme }) => theme.media.tab }) {
+        width: 90%;
       }
 
       h4 {
@@ -172,7 +213,6 @@ const Wrapper = styled.section`
         border-radius: 5rem;
         padding: 5px 1rem;
         font-size: 1.3rem;
-
 
         @media (max-width: 768px) {
           font-size: 1rem;
@@ -221,7 +261,7 @@ const Wrapper = styled.section`
         }
       }
 
-      button {
+      a {
         padding: 1rem 2rem;
         margin-top: 1rem;
         background-color: #9017f5;
@@ -234,13 +274,12 @@ const Wrapper = styled.section`
           color: #000;
         }
 
-
-        @media (max-width: ${({theme}) => theme.media.mobile}) {
+        @media (max-width: ${({ theme }) => theme.media.mobile }) {
           padding: 1rem 1.5rem;
         }
       }
     }
   }
-`
+`;
 
-export default Header
+export default Header;

@@ -62,17 +62,23 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        marquee: "marquee var(--duration) linear infinite",
+        "marquee": "marquee var(--duration) linear infinite",
         "marquee-reverse": "marquee-reverse var(--duration) linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
-        marquee: {
+        "marquee": {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(-100%)" },
         },
         "marquee-reverse": {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(100%)" },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
         },
       },
     },

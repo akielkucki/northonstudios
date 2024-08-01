@@ -74,7 +74,6 @@ const Projects = () => {
                         />
                     </h1>
                 </div>
-                <button>ALL PROJECTS</button>
             </div>
             <Slider {...settings} className="projects">
                 {projects.map((currElem, index) => (
@@ -96,6 +95,7 @@ const Wrapper = styled.section`
     flex-direction: column;
     gap: 1rem;
 
+    
     .project-head {
         width: 100%;
         color: #fff;
@@ -114,18 +114,27 @@ const Wrapper = styled.section`
             flex-direction: column;
             font-family: Poppins, sans-serif;
             width: 80%;
+
+            @media (max-width: ${({theme}) => theme.media.mobile}) {
+                width: 100%;
+            }   
             
             h4 {
                 border: 1px solid #9017f5;
                 border-radius: 5rem;
                 padding: 5px 1rem;
-            }
+
+                }
                 
             h1 {
                 width: 50%;
                 font-size: 2.5rem;
+
+                @media (max-width: ${({theme}) => theme.media.mobile}) {
+                    width: 100%;
+                }   
             }
-        }
+            }
 
         button {
             font-family: Poppins, sans-serif;

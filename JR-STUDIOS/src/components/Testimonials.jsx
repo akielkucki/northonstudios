@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { FadeText } from "@/components/magicui/fade-text";
 import "slick-carousel/slick/slick.css"; 
+import { BorderBeam } from "@/components/magicui/border-beam";
 import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
@@ -99,6 +100,10 @@ const Wrapper = styled.section`
   width: 100%;
   padding: 4rem;
 
+  @media (max-width: ${({theme}) => theme.media.mobile}) {
+    padding: 2rem;
+  }
+
   .head-testemonials {
     width: 100%;
     display: flex;
@@ -117,6 +122,12 @@ const Wrapper = styled.section`
     h1 {
       font-size: 3.5rem;
       color: #fff;
+      text-align: center;
+
+      @media (max-width: ${({theme}) => theme.media.mobile}) {
+        font-size: 2.8rem;
+        padding-top: 1rem;
+      }
     }
   }
 
