@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div>
           <a href='https://discord.gg/6PGfR2N742' className='me-4 text-reset'>
-            <MDBIcon style={{color: '#9017f5'}} fab icon="discord" />
+            <MDBIcon style={{ color: '#9017f5' }} fab icon="discord" />
           </a>
         </div>
       </section>
@@ -22,7 +22,7 @@ const Footer = () => {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4' style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }} >
                 <MDBIcon icon="gem" className="me-3" />
-                <span style={{color: '#9017f5'}}>JR</span> Studios
+                <span style={{ color: '#9017f5' }}>JR</span> Studios
               </h6>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }} >
                 JR Studios is a software company turns your ideas into code not even just code Its our creation!
@@ -32,15 +32,15 @@ const Footer = () => {
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4' style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>Contact</h6>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="home" style={{color: '#9017f5'}} className="me-2" />
+                <MDBIcon icon="home" style={{ color: '#9017f5' }} className="me-2" />
                 Pakistan, District Central
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="envelope" style={{color: '#9017f5'}} className="me-3" />
+                <MDBIcon icon="envelope" style={{ color: '#9017f5' }} className="me-3" />
                 jaundev768@gmail.com
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="phone" style={{color: '#9017f5'}} className="me-3" /> +92 341 3766240
+                <MDBIcon icon="phone" style={{ color: '#9017f5' }} className="me-3" /> +92 341 3766240
               </p>
             </MDBCol>
 
@@ -51,7 +51,7 @@ const Footer = () => {
                   Web Design
                 </a>
               </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}> 
+              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <a href='#!' className='text-reset' >
                   Web Development
                 </a>
@@ -91,8 +91,13 @@ const Footer = () => {
                 </a>
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='#!' className='text-reset'>
-                  Hand Books
+                <a href='https://docs.google.com/document/d/1EYoD4fjL2G-YV6Vq8sxtIpLt_9AXCAKh5Hip6h3DHFA/edit?usp=sharing' className='text-reset'>
+                  Hand Book For Client
+                </a>
+              </p>
+              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
+                <a href='https://docs.google.com/document/d/1kTLWd6NY22s-oeRqC9iqt2TfKSIBqKLRCCxbY9cUncU/edit?usp=sharing' className='text-reset'>
+                  Hand Book For Freelancer
                 </a>
               </p>
             </MDBCol>
@@ -102,7 +107,7 @@ const Footer = () => {
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2024 Copyright,
-        <a className='text-reset fw-bold' style={{paddingLeft: '0.5rem'}}>
+        <a className='text-reset fw-bold' style={{ paddingLeft: '0.5rem' }}>
           JR Studios LLC
         </a>
       </div>
