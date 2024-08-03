@@ -106,7 +106,7 @@ const Footer = () => {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2024 Copyright,
+        2024,
         <a className='text-reset fw-bold' style={{ paddingLeft: '0.5rem' }}>
           JR Studios LLC
         </a>
