@@ -40,7 +40,7 @@ const Footer = () => {
                 jaundev768@gmail.com
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="phone" style={{ color: '#9017f5' }} className="me-3" /> +92 341 3766240
+                <MDBIcon icon="phone" style={{ color: '#9017f5' }} className="me-3" />+92 341 3766240
               </p>
             </MDBCol>
 

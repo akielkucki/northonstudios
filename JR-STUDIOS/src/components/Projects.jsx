@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
 import { FadeText } from "@/components/magicui/fade-text";
 import styled from 'styled-components';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,6 +19,11 @@ const Projects = () => {
                 index: 2,
                 title: "Email Signature",
                 image: "/projects-img/liam-email-sign.png",
+            },
+            {
+                index: 3,
+                title: "Custom Plugin FC-Overval",
+                image: "/projects-img/alberto-plugin.png",
             }
         ]);
     }, []);
