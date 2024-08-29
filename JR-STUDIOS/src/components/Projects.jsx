@@ -24,6 +24,12 @@ const Projects = () => {
                 index: 3,
                 title: "Custom Plugin FC-Overval",
                 image: "/projects-img/alberto-plugin.png",
+            },
+            {
+                index: 4,
+                title: "Ohana Services Website",
+                image: "/projects-img/ohanaservices-alfred.png",
+                link: "https://ohanaservices.co"
             }
         ]);
     }, []);
