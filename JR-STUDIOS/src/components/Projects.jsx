@@ -29,7 +29,7 @@ const Projects = () => {
                 index: 4,
                 title: "Ohana Services Website",
                 image: "/projects-img/ohanaservices-alfred.png",
-                link: "https://ohanaservices.co"
+                // link: "https://ohanaservices.co"
             }
         ]);
     }, []);
@@ -91,7 +91,7 @@ const Projects = () => {
                     <div className="card" key={index}>
                         <img src={currElem.image} alt={currElem.title} />
                         <div className="card-info">{currElem.title}</div>
-                        {currElem.link ? <a>Live <i className='fa fa-redirect'></i></a> : null}
+                        {/* {currElem.link ? <a>Live <i className='fa fa-redirect'></i></a> : null} */}
                     </div>
                 ))}
             </Slider>
