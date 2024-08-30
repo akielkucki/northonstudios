@@ -29,7 +29,7 @@ const Projects = () => {
                 index: 4,
                 title: "Ohana Services Website",
                 image: "/projects-img/ohanaservices-alfred.png",
-                // link: "https://ohanaservices.co"
+                link: "https://ohanaservices.co"
             }
         ]);
     }, []);
@@ -38,7 +38,7 @@ const Projects = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: projects.length,
+        slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [
             {
@@ -91,7 +91,9 @@ const Projects = () => {
                     <div className="card" key={index}>
                         <img src={currElem.image} alt={currElem.title} />
                         <div className="card-info">{currElem.title}</div>
-                        {/* {currElem.link ? <a>Live <i className='fa fa-redirect'></i></a> : null} */}
+                        <div className="card-link">
+                        {currElem.link ? <a href={currElem?.link} target='_blank'>Live <i className='fa fa-external-link'></i></a> : null}
+                        </div>
                     </div>
                 ))}
             </Slider>
@@ -212,6 +214,16 @@ const Wrapper = styled.section`
             .card-info {
                 text-align: center;
                 font-size: 1.2rem;
+            }
+
+            .card-link {
+                padding-top: 1rem;
+                font-size: 1.3rem;
+                text-align: right;
+
+                a:hover {
+                    color: #9017f5;
+                }
             }
         }
     }
