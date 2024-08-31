@@ -68,11 +68,6 @@ const Footer = () => {
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <a href='#!' className='text-reset' >
-                  Video Editing
-                </a>
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='#!' className='text-reset' >
                   3D Modeling
                 </a>
               </p>
@@ -88,16 +83,6 @@ const Footer = () => {
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <a href='#!' className='text-reset'>
                   Terms Of Service
-                </a>
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='https://docs.google.com/document/d/1EYoD4fjL2G-YV6Vq8sxtIpLt_9AXCAKh5Hip6h3DHFA/edit?usp=sharing' className='text-reset'>
-                  Hand Book For Client
-                </a>
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='https://docs.google.com/document/d/1kTLWd6NY22s-oeRqC9iqt2TfKSIBqKLRCCxbY9cUncU/edit?usp=sharing' className='text-reset'>
-                  Hand Book For Freelancer
                 </a>
               </p>
             </MDBCol>
