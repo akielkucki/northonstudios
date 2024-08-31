@@ -54,11 +54,6 @@ const Services = () => {
                     <p>Producing visual content to communicate messages, utilizing typography, imagery, and color.</p>
                 </div>
                 <div className="card">
-                    <img src="/icons/video-editing.png" alt="video-edit" />
-                    <h3>Video Editing</h3>
-                    <p>Manipulating and rearranging video shots to create a cohesive and engaging final product.</p>
-                </div>
-                <div className="card">
                     <img src="/icons/bot.png" alt="bot-dev" />
                     <h3>Bot Development</h3>
                     <p>Designing and programming automated systems to perform tasks and interact with users or systems.</p>
