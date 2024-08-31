@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { FadeText } from "@/components/magicui/fade-text";
 
+
 const Services = () => {
     return (
         <Wrapper>
