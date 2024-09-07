@@ -81,7 +81,7 @@ const Footer = () => {
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4' style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>Useful Links</h6>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='#!' className='text-reset'>
+                <a href='https://docs.google.com/document/d/12FRBeomKuVxvR8vmevlimAXdK34fw9h1QfD7S0krJL4/edit?usp=sharing' className='text-reset'>
                   Terms Of Service
                 </a>
               </p>
