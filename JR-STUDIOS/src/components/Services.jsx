@@ -54,16 +54,6 @@ const Services = () => {
                     <h3>Graphic Designing</h3>
                     <p>Producing visual content to communicate messages, utilizing typography, imagery, and color.</p>
                 </div>
-                <div className="card">
-                    <img src="/icons/bot.png" alt="bot-dev" />
-                    <h3>Bot Development</h3>
-                    <p>Designing and programming automated systems to perform tasks and interact with users or systems.</p>
-                </div>
-                <div className="card">
-                    <img src="/icons/mc.png" alt="mc-dev" />
-                    <h3>Minecraft Development</h3>
-                    <p>Developing custom content, mods, plugins and features within the Minecraft game to enhance the gaming experience.</p>
-                </div>
             </div>
         </Wrapper>
     )
