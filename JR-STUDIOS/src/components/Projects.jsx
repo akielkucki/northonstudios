@@ -25,11 +25,23 @@ const Projects = () => {
                 title: "Custom Plugin FC-Overval",
                 image: "/projects-img/alberto-plugin.png",
             },
+            // {
+            //     index: 4,
+            //     title: "Ohana Services Website",
+            //     image: "/projects-img/ohanaservices-alfred.png",
+            //     link: "https://ohanaservices.co/"
+            // }
             {
                 index: 4,
-                title: "Ohana Services Website",
-                image: "/projects-img/ohanaservices-alfred.png",
-                link: "https://ohanaservices.co/"
+                title: "Paved Payments",
+                image: "/projects-img/9.png",
+                link: "https://pavedpayments.com/"
+            },
+            {
+                index: 5,
+                title: "The Blockcade",
+                image: "/projects-img/10.png",
+                link: "https://theblockcade.com/"
             }
         ]);
     }, []);

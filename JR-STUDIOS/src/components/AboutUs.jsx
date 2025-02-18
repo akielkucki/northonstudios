@@ -46,7 +46,7 @@ const AboutUs = () => {
                             framerProps={{
                                 show: { transition: { delay: 0.5 } },
                             }}
-                            text="JR Studios, your go-to tech agency for all things digital. We specialize in crafting innovative web and app solutions, creating stunning graphic designs, and producing intricate 3D models. Our mission is to turn your ideas into reality, blending creativity with technology to empower brands in the tech age. At JR Studios, it's not just about code—it's about creation. Let's build something extraordinary together!"
+                            text="JR Studios – Your go-to tech agency for cutting-edge web solutions, stunning graphic designs, and intricate 3D modeling. We blend creativity with technology to craft visually striking and functional digital experiences. At JR Studios, it’s not just about design—it’s about innovation. Let’s bring your vision to life!"
                         />
                     </p>
                 </div>

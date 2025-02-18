@@ -25,6 +25,12 @@ const reviews = [
     body: "Awesome Developer and product!!!",
     img: "/testimonials-img/chase.jpeg",
   },
+  {
+    name: "Holy",
+    username: "@holy",
+    body: "Amazing devs, They are great to work with. Nice and friendly, understanding and goes beyond to deliver exactly what you want for a very very fair price. Definitely would recommend for anyone looking for a web work. Completes it in time and helps you along the way with every single step. Will definitely be asking for JR Studios anytime I need some dev work !! :)",
+    img: "/testimonials-img/holy.webp",
+  },
 ];
 
 const Testimonials = () => {

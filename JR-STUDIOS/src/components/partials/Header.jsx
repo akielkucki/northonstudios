@@ -16,8 +16,17 @@ const Header = () => {
     <Wrapper>
       <Particles
         className="absolute inset-0 particles"
-        quantity={1000}
+        quantity={20}
         ease={10}
+        size={10}
+        color={'#fff'}
+        refresh
+      />
+      <Particles
+        className="absolute inset-0 particles"
+        quantity={20}
+        ease={10}
+        size={5}
         color={'#fff'}
         refresh
       />

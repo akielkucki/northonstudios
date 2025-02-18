@@ -30,19 +30,14 @@ const Services = () => {
             </div>
             <div className="services-card">
                 <div className="card">
-                    <img src="/icons/web-design.png" alt="web-design" />
-                    <h3>Web Design</h3>
-                    <p>Crafting visually appealing and user-friendly website layouts, focusing on aesthetics and user experience.</p>
-                </div>
-                <div className="card">
                     <img src="/icons/web-dev.png" alt="web-dev" />
                     <h3>Web Development</h3>
                     <p>Building and maintaining the core structure of websites, ensuring functionality and performance.</p>
                 </div>
                 <div className="card">
-                    <img src="/icons/app-dev.png" alt="app-dev" />
-                    <h3>App Development</h3>
-                    <p>Creating mobile applications for various platforms, emphasizing usability and performance.</p>
+                    <img src="/icons/web-design.png" alt="web-design" />
+                    <h3>Web Design</h3>
+                    <p>Crafting visually appealing and user-friendly website layouts, focusing on aesthetics and user experience.</p>
                 </div>
                 <div className="card">
                     <img src="/icons/3d-modeling.png" alt="3d-modeling" />
