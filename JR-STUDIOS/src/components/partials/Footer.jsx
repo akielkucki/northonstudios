@@ -32,15 +32,8 @@ const Footer = () => {
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4' style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>Contact</h6>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="home" style={{ color: '#9017f5' }} className="me-2" />
-                Pakistan, District Central
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <MDBIcon icon="envelope" style={{ color: '#9017f5' }} className="me-3" />
                 jaundev768@gmail.com
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <MDBIcon icon="phone" style={{ color: '#9017f5' }} className="me-3" />+92 341 3766240
               </p>
             </MDBCol>
 
@@ -57,11 +50,6 @@ const Footer = () => {
                 </a>
               </p>
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='#!' className='text-reset' >
-                  App Development
-                </a>
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <a href='#!' className='text-reset'>
                   Graphic Design
                 </a>
@@ -69,11 +57,6 @@ const Footer = () => {
               <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
                 <a href='#!' className='text-reset' >
                   3D Modeling
-                </a>
-              </p>
-              <p style={{ color: '#fff', fontFamily: 'Poppins, sens-serif' }}>
-                <a href='#!' className='text-reset' >
-                  Minecraft
                 </a>
               </p>
             </MDBCol>
@@ -91,7 +74,7 @@ const Footer = () => {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        2024,
+        2025,
         <a className='text-reset fw-bold' style={{ paddingLeft: '0.5rem' }}>
           JR Studios
         </a>
