@@ -349,7 +349,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <a href="mailto:team@jrstudios.co" className="text-white hover:text-purple-300 transition-colors">jaundev768@gmail.com</a>
+                      <a href="mailto:team@jrstudios.co" className="text-white hover:text-purple-300 transition-colors">team@jrstudios.co</a>
                     </div>
                   </motion.div>
 
