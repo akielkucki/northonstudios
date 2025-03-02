@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+    <!-- Abstract Bridge Element -->
+    <path d="M100 150 L150 110 L220 150 L280 110 L350 150 L400 110 L400 150 Z" fill="#565656"/>
+
+    <!-- Horizontal Line -->
+    <rect x="100" y="150" width="300" height="8" fill="#565656"/>
+
+    <!-- Modern Building Element -->
+    <path d="M120 158 L120 210 L200 210 L200 158" fill="#565656"/>
+    <rect x="135" y="175" width="15" height="35" fill="white"/>
+    <rect x="170" y="175" width="15" height="15" fill="white"/>
+    <rect x="170" y="195" width="15" height="15" fill="white"/>
+
+    <!-- Abstract Construction Elements -->
+    <rect x="250" y="158" width="150" height="52" fill="#565656"/>
+    <path d="M250 158 L300 130 L370 190 L370 158" fill="#565656"/>
+
+    <!-- Window Elements -->
+    <rect x="265" y="175" width="12" height="25" fill="white"/>
+    <rect x="290" y="175" width="12" height="25" fill="white"/>
+    <rect x="315" y="175" width="12" height="25" fill="white"/>
+    <rect x="340" y="175" width="12" height="25" fill="white"/>
+
+    <!-- Company Name - Modern Sans Serif -->
+    <text x="250" y="245" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#565656">REDBRIDGE</text>
+    <text x="250" y="270" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="2" text-anchor="middle" fill="#565656">CONSTRUCTION</text>
+</svg>

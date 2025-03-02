@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+    <!-- Clean Background -->
+
+
+    <!-- Minimal Design Element - Single Red Bar -->
+    <rect x="120" y="165" width="260" height="8" fill="#565656"/>
+
+    <!-- Main Logo Text - Bold, Modern Typography -->
+    <text x="250" y="150" font-family="Arial, sans-serif" font-size="80" font-weight="900" text-anchor="middle" letter-spacing="2">
+        <tspan fill="#434343">CRE</tspan><tspan fill="#565656">8</tspan><tspan fill="#434343">V</tspan>
+    </text>
+
+    <!-- Small Tagline for Marketing Agency -->
+    <text x="250" y="190" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="4" fill="#434343">MARKETING AGENCY</text>
+</svg>
