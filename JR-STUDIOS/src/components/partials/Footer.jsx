@@ -260,7 +260,7 @@ const FuturisticFooter = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">
-                © 2025, <span className="text-purple-400 font-medium">JR Studios</span>. All rights reserved.
+                2025, <span className="text-purple-400 font-medium">JR Studios</span>
               </p>
 
               <motion.div
