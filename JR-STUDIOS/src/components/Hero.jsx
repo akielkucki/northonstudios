@@ -180,7 +180,7 @@ const FuturisticHero = () => {
                     className="relative"
                 >
                     <motion.a
-                        href="mailto:jaundev768@gmail.com"
+                        href="mailto:team@jrstudios.co"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
                         className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-10 py-4"

@@ -25,10 +25,8 @@ const Header = () => {
                 refresh
             />
 
-            {/* Implement the new Futuristic Navbar */}
             <FuturisticNavbar />
 
-            {/* Replace with the new hero component */}
             <FuturisticHero />
         </section>
     );
