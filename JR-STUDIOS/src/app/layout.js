@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-    title: "JR Studios Website Design & Digital Marketing Agency",
-    description: "Award-winning website design and digital marketing solutions that drive results. Our expert team creates stunning, conversion-focused websites with advanced SEO strategies.",
-    keywords: "website design, digital marketing, SEO, web development, UI/UX, conversion optimization, responsive design",
+    title: "JR Studios",
+    description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
+    keywords: "JR Studios, software development, tech solutions, digital innovation, brand empowerment, website development, website design, digital marketing, SEO, web development, UI/UX, conversion optimization, responsive design, 3d, 3d modeling, graphic, graphic designing",
     openGraph: {
-        title: "JR Studios Website Design & Digital Marketing Agency",
-        description: "Award-winning website design and digital marketing solutions that drive results. Our expert team creates stunning, conversion-focused websites with advanced SEO strategies.",
+        title: "JR Studios",
+        description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
         url: "https://jrstudios.co",
         siteName: "JR Studios",
         images: [
@@ -34,9 +34,9 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Premier Website Design & Digital Marketing Agency",
-        description: "Award-winning website design and digital marketing solutions that drive results.",
-        images: ["https://jrstudios.co/twitter-image.jpg"],
+        title: "JR Studios - Empowering Brands In The Tech Age",
+        description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
+        images: ["https://www.jrstudios.co/imgs/logo.png"],
     },
     robots: {
         index: true,
@@ -54,19 +54,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="h-full">
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-purple-500 selection:text-white font-thin`}
-        >
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <footer className="bg-purple-900 text-white py-6">
-                <div className="container mx-auto px-4">
-                    <p className="text-center text-sm">{new Date().getFullYear()} JR Studios</p>
+            <link rel="icon" type="image/svg+xml" href="/imgs/web-logo.png" />
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-purple-500 selection:text-white font-thin`}
+            >
+                <div className="flex flex-col min-h-screen">
+                    <Header />
+                    <main className="flex-grow">{children}</main>
+                    <footer className="bg-purple-900 text-white py-6">
+                        <div className="container mx-auto px-4">
+                            <p className="text-center text-sm">{new Date().getFullYear()} JR Studios</p>
+                        </div>
+                    </footer>
                 </div>
-            </footer>
-        </div>
-        </body>
+            </body>
         </html>
     );
 }
