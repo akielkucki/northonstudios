@@ -59,7 +59,6 @@ export default function RootLayout({ children }) {
                 className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-purple-500 selection:text-white font-thin`}
             >
                 <div className="flex flex-col min-h-screen">
-                    <Header />
                     <main className="flex-grow">{children}</main>
                     <footer className="bg-purple-900 text-white py-6">
                         <div className="container mx-auto px-4">
