@@ -1,29 +1,27 @@
-
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import {Marquee} from "@/components/magicui/marquee";
+import { Marquee } from "@/components/magicui/marquee";
 
 const companies = [
     { name: "Paved Payments", logo: "/logo-1.png" },
     { name: "Red Bridge", logo: "/redbridge-logo.png" },
     { name: "Monman11", logo: "/monman11.png" },
     { name: "Addison Wolfe Real Estate", logo: "/wolfe-logo.webp" },
-
 ];
 
 const firstRow = companies.slice(0, Math.ceil(companies.length));
 
-
 const CompanyLogo = ({ name, logo }) => (
     <div className="mx-8 flex items-center justify-center">
-        <Image
-            src={logo}
-            alt={`${name} logo`}
-            width={400} // Adjust for better responsiveness
-            height={200}
-            className="w-full h-20 sm:h-24"
-            loading="lazy"
-        />
+        <div className="w-32 h-16 sm:w-40 sm:h-20 relative flex items-center justify-center">
+            <Image
+                src={logo}
+                alt={`${name} logo`}
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 8rem, 10rem"
+            />
+        </div>
     </div>
 );
 
@@ -40,7 +38,10 @@ const Trusted = () => {
             </div>
 
             <div className="flex w-full flex-col items-center mt-10 md:mt-0">
-                <Marquee pauseOnHover className="[--duration:30s]">
+                <Marquee
+                    pauseOnHover
+                    className="[--duration:60s] sm:[--duration:40s]"
+                >
                     {firstRow.map((company, idx) => (
                         <CompanyLogo key={`${company.name}-${idx}`} {...company} />
                     ))}
