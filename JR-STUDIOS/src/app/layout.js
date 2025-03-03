@@ -23,7 +23,7 @@ export const metadata = {
         siteName: "JR Studios",
         images: [
             {
-                url: "/imgs/jr-logo.png",
+                url: "/imgs/logo.png",
                 width: 1200,
                 height: 630,
                 alt: "JR Studios Logo",
@@ -36,7 +36,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "JR Studios - Empowering Brands In The Tech Age",
         description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
-        images: ["https://www.jrstudios.co/imgs/jr-logo.png"],
+        images: ["https://www.jrstudios.co/imgs/logo.png"],
     },
     robots: {
         index: true,
