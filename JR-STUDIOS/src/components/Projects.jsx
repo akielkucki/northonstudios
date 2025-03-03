@@ -140,7 +140,7 @@ const ProjectCard = ({ project, index }) => {
 };
 
 // Main Projects Component
-const FuturisticProjects = () => {
+const FuturisticProjects = ({id}) => {
     const [projects, setProjects] = useState([]);
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -192,6 +192,7 @@ const FuturisticProjects = () => {
         <section
             ref={containerRef}
             className="relative bg-black py-24 overflow-hidden"
+            id={id}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden">

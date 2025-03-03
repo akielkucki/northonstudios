@@ -39,7 +39,7 @@ const CounterAnimation = ({ target, duration = 2, className = "" }) => {
     return <span ref={ref} className={className}>{count}+</span>;
 };
 
-const AboutUs = () => {
+const AboutUs = ({id}) => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -81,7 +81,7 @@ const AboutUs = () => {
     };
 
     return (
-        <section ref={containerRef} className="w-full bg-black relative overflow-hidden py-24">
+        <section ref={containerRef} className="w-full bg-black relative overflow-hidden py-24" id={id}>
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
                 {/* Grid pattern */}
@@ -163,7 +163,7 @@ const AboutUs = () => {
                             <div className="absolute inset-5 overflow-hidden rounded">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-transparent mix-blend-overlay z-10"></div>
                                 <Image
-                                    src="/imgs/logo.png"
+                                    src="/imgs/jr-logo.png"
                                     alt="JR-Studios-Logo"
                                     className="object-contain"
                                     fill

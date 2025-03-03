@@ -5,9 +5,9 @@ import FuturisticNavbar from "@/components/NavBar";
 import FuturisticHero from "@/components/Hero";
 
 
-const Header = () => {
+const Header = ({id}) => {
     return (
-        <section className="relative h-screen bg-transparent">
+        <section className="relative bg-transparent" id={id}>
             <Particles
                 className="absolute inset-0 z-0"
                 quantity={20}
@@ -25,8 +25,10 @@ const Header = () => {
                 refresh
             />
 
-            <FuturisticNavbar />
+            {/* Implement the new Futuristic Navbar */}
 
+
+            {/* Replace with the new hero component */}
             <FuturisticHero />
         </section>
     );

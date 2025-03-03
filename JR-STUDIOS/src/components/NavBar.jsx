@@ -107,6 +107,9 @@ const FuturisticNavbar = () => {
                                         : 'text-white hover:text-white'
                                 } ${index !== navItems.length - 1 ? 'border-b md:border-b-0 border-purple-600/30' : ''}`}
                                 onMouseOver={() => setActiveNav(item.id)}
+                                onClick={() => {
+                                    document.getElementById(item.id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+                                }}
                             >
                                 {item.label}
                                 {activeNav === item.id && (
@@ -134,6 +137,9 @@ const FuturisticNavbar = () => {
                     <motion.button
                         whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(168, 85, 247, 0.7)" }}
                         className="mt-4 md:mt-0 md:ml-4 bg-purple-600 border border-purple-400 text-white font-medium rounded-full py-2 px-6 text-sm flex items-center justify-center relative group w-full md:w-auto"
+                        onClick={() => {
+                            document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
+                        }}
                     >
                         <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                         <span className="relative z-10">CONTACT US</span>

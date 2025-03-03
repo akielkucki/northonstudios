@@ -203,13 +203,12 @@ const Dot = ({ isActive, index }) => {
 };
 
 // Main component
-const FuturisticServices = () => {
+const FuturisticServices = ({id}) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
     const containerRef = useRef(null);
     const servicesRef = useRef([]);
 
-    // Services data
     const services = [
         {
             icon: "/icons/web-dev.png",
@@ -306,6 +305,7 @@ const FuturisticServices = () => {
         <section
             ref={containerRef}
             className="relative min-h-screen bg-black py-20 overflow-hidden"
+            id={id}
         >
             {/* Background elements */}
             <div className="absolute inset-0">

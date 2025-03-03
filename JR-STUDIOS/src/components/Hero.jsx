@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+
 // Custom component for text animation
 const AnimatedText = ({ text, direction = "up", delay = 0, className = "", type = "span" }) => {
     const [ref, isInView] = useInView({
@@ -46,7 +47,8 @@ const FuturisticHero = () => {
     const containerRef = React.useRef(null);
 
     return (
-        <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+
+        <div className="relative w-full h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-black">
             {/* Background Elements */}
             <div className="absolute inset-0 z-0">
                 {/* Abstract Grid Lines */}
@@ -179,8 +181,10 @@ const FuturisticHero = () => {
                     transition={{ duration: 0.7, delay: 1.2 }}
                     className="relative"
                 >
-                    <motion.a
-                        href="mailto:team@jrstudios.co"
+                    <motion.button
+                        onClick={() => {
+                            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+                        }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
                         className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-10 py-4"
@@ -216,13 +220,15 @@ const FuturisticHero = () => {
                 <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
               </motion.svg>
             </span>
-                    </motion.a>
+                    </motion.button>
 
                     {/* Button Reflection */}
                     <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-purple-600/20 blur-xl rounded-full"></div>
                 </motion.div>
             </div>
+
         </div>
+
     );
 };
 

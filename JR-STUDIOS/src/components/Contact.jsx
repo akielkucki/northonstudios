@@ -95,7 +95,7 @@ const AnimatedInput = ({
   );
 };
 
-const Contact = () => {
+const Contact = ({id}) => {
   const [formData, setFormData] = useState({
     businessName: '',
     firstName: '',
@@ -235,6 +235,7 @@ const Contact = () => {
       <section
           ref={containerRef}
           className="relative bg-black py-24 overflow-hidden"
+          id={id}
       >
         {/* Background Elements */}
         <div className="absolute inset-0 z-0">
@@ -377,7 +378,7 @@ const Contact = () => {
                 {/* Action buttons */}
                 <div className="flex flex-wrap gap-4">
                   <motion.a
-                      href='mailto:jaundev768@gmail.com'
+                      href='mailto:team@jrstudios.co'
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       initial={{ opacity: 0, y: 20 }}

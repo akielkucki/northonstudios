@@ -229,7 +229,7 @@ const FuturisticFooter = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 font-light">Email</p>
-                      <a href="team@jrstudios.co" className="text-white hover:text-purple-400 transition-colors">
+                      <a href="mailto:team@jrstudios.co" className="text-white hover:text-purple-400 transition-colors">
                         team@jrstudios.co
                       </a>
                     </div>
@@ -260,7 +260,7 @@ const FuturisticFooter = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">
-                2025, <span className="text-purple-400 font-medium">JR Studios</span>
+                © 2025, <span className="text-purple-400 font-medium">JR Studios</span>. All rights reserved.
               </p>
 
               <motion.div

@@ -174,7 +174,7 @@ const reviews = [
 ];
 
 // Main Testimonials Component
-const FuturisticTestimonials = () => {
+const FuturisticTestimonials = ({id}) => {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const { scrollYProgress } = useScroll({
@@ -193,6 +193,7 @@ const FuturisticTestimonials = () => {
       <section
           ref={containerRef}
           className="relative bg-black py-24 overflow-hidden"
+          id={id}
       >
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
