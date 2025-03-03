@@ -54,7 +54,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="h-full">
-            <link rel="icon" type="image/*" href="/imgs/jr-logo.png" />
+            <link rel="icon" type="image/svg+xml" href="/imgs/jr-logo.png" />
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-purple-500 selection:text-white font-thin`}
             >
