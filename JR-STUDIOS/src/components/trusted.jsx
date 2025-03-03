@@ -5,7 +5,6 @@ import {Marquee} from "@/components/magicui/marquee";
 
 const companies = [
     { name: "Paved Payments", logo: "/logo-1.png" },
-    { name: "Arcane Studios", logo: "/arcane-logo.png" },
     { name: "Red Bridge", logo: "/redbridge-logo.png" },
     { name: "Monman11", logo: "/monman11.png" },
     { name: "Addison Wolfe Real Estate", logo: "/wolfe-logo.webp" },
