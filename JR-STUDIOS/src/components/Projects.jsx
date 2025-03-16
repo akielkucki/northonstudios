@@ -164,6 +164,12 @@ const FuturisticProjects = ({id}) => {
                 link: "https://pavedpayments.com/"
             },
             {
+                index: 1,
+                title: "GunGens",
+                image: "/projects-img/gungens.png",
+                link: "https://www.gungens.com/"
+            },
+            {
                 index: 2,
                 title: "Red Bridge Construction",
                 image: "/projects-img/redbridge.png",
