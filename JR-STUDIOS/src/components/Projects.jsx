@@ -168,6 +168,7 @@ const FuturisticProjects = ({id}) => {
                 title: "GunGens",
                 image: "/projects-img/gungens.png",
                 link: "https://www.gungens.com/"
+            },
             {
                 index: 7,
                 title: "Locke Blender - Theicha",
