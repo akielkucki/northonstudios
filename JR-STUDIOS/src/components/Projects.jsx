@@ -164,10 +164,15 @@ const FuturisticProjects = ({id}) => {
                 link: "https://pavedpayments.com/"
             },
             {
-                index: 1,
+                index: 6,
                 title: "GunGens",
                 image: "/projects-img/gungens.png",
                 link: "https://www.gungens.com/"
+            {
+                index: 7,
+                title: "Locke Blender - Theicha",
+                image: "/projects-img/theicha.png",
+                link: "https://www.youtube.com/@lockeblender"
             },
             {
                 index: 2,
