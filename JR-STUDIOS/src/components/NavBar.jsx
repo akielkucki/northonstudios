@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Particles } from "@/components/magicui/particles";
+import Image from "next/image";
+import {brand} from "@/lib/vars";
 
 const FuturisticNavbar = () => {
     const [activeNav, setActiveNav] = useState('HOME');
@@ -69,14 +71,14 @@ const FuturisticNavbar = () => {
                         <div className="relative h-10 w-10 mr-2">
                             <div className="absolute inset-0 bg-purple-500 rounded-full opacity-90"></div>
                             <div className="absolute inset-1 bg-black rounded-full flex items-center justify-center">
-                                <span className="text-white text-xs font-medium">JR</span>
+                                <span className="text-white text-xs font-medium"><Image src={"/brand/logo.png"} alt={`${brand.name} logo`} fill className={"rounded-full"}/></span>
                             </div>
                             <div className="absolute -inset-1 bg-transparent border border-purple-300 rounded-full opacity-60 animate-pulse"></div>
                         </div>
 
                         <h2 className="text-xl text-white font-normal tracking-widest">
-                            <span className="text-purple-400 font-semibold">JR</span>
-                            <span className="text-xs ml-1 font-medium">STUDIOS</span>
+                            <span className="text-purple-400 font-semibold">{brand.name.split(" ")[0]}</span>
+                            <span className="ml-0.5 font-medium">{brand.name.split(" ")[1]}</span>
                         </h2>
                     </motion.div>
 

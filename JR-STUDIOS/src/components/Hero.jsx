@@ -2,10 +2,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import {brand} from "@/lib/vars";
 
 
 // Custom component for text animation
-const AnimatedText = ({ text, direction = "up", delay = 0, className = "", type = "span" }) => {
+const AnimatedText = ({ text, direction = "up", delay = 0, className = "", type = "span", children }) => {
     const [ref, isInView] = useInView({
         triggerOnce: true,
         threshold: 0.1
@@ -38,7 +39,7 @@ const AnimatedText = ({ text, direction = "up", delay = 0, className = "", type 
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
         >
-            {text}
+            {children}
         </Component>
     );
 };
@@ -69,7 +70,7 @@ const FuturisticHero = () => {
             </div>
 
             {/* Main Content Container */}
-            <div className="relative z-10 flex flex-col items-center justify-center max-w-4xl px-6 text-center">
+            <div className="relative z-10 flex flex-col items-center justify-center max-w-7xl px-6 text-center">
                 {/* Top Badge */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -79,11 +80,11 @@ const FuturisticHero = () => {
                 >
                     <div className="bg-black/50 backdrop-blur-md border border-purple-500/50 rounded-full px-6 py-2 inline-block">
                         <AnimatedText
-                            text="JR STUDIOS"
+
                             direction="up"
                             delay={0.1}
                             className="text-base md:text-lg font-medium text-white tracking-widest"
-                        />
+                        >{brand.name.toUpperCase()}</AnimatedText>
                     </div>
 
                     {/* Decorative Elements */}
@@ -99,45 +100,66 @@ const FuturisticHero = () => {
                     className="relative mb-6"
                 >
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white">
-            <span className="relative inline-block">
-              <AnimatedText
-                  text="Empowering"
-                  direction="up"
-                  delay={0.4}
-                  className="relative z-10 bg-clip-text text-transparent bg-gradient-to-br from-purple-300 to-white"
-                  type="span"
-              />
-              <div className="absolute inset-0 bg-purple-500/10 blur-xl"></div>
-            </span>{" "}
+  <span className="relative inline-block">
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.4}
+        className="relative z-10 text-gray-300"
+        type="span"
+    >Websites That</AnimatedText>
+  </span>{" "}
                         <span className="relative inline-block">
-              <AnimatedText
-                  text="Brands"
-                  direction="up"
-                  delay={0.5}
-                  className="relative z-10 font-normal"
-                  type="span"
-              />
-            </span>{" "}
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.5}
+        className="relative z-10 text-emerald-400 font-semibold"
+        type="span"
+    >Sell,</AnimatedText>
+    <div className="absolute inset-0 bg-emerald-400/20 blur-lg"></div>
+  </span>{" "}
                         <span className="relative inline-block">
-              <AnimatedText
-                  text="In The"
-                  direction="up"
-                  delay={0.6}
-                  className="relative z-10"
-                  type="span"
-              />
-            </span>{" "}
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.55}
+        className="relative z-10 text-cyan-400 font-semibold"
+        type="span"
+    >Track,</AnimatedText>
+    <div className="absolute inset-0 bg-cyan-400/20 blur-lg"></div>
+  </span>{" "}
                         <span className="relative inline-block">
-              <AnimatedText
-                  text="Tech Age"
-                  direction="up"
-                  delay={0.7}
-                  className="relative z-10 text-purple-300 font-semibold"
-                  type="span"
-              />
-              <div className="absolute inset-0 bg-purple-500/10 blur-xl"></div>
-            </span>
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.6}
+        className="relative z-10 text-amber-400 font-semibold"
+        type="span"
+    >and Follow Up</AnimatedText>
+    <div className="absolute inset-0 bg-amber-400/20 blur-lg"></div>
+  </span>{" "}
+                        <span className="relative inline-block">
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.65}
+        className="relative z-10 text-gray-200"
+        type="span"
+    >So You Can Focus on Running</AnimatedText>
+  </span>{" "}
+                        <span className="relative inline-block">
+    <AnimatedText
+        text=""
+        direction="up"
+        delay={0.7}
+        className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-purple-300 font-bold"
+        type="span"
+    >Your Business</AnimatedText>
+    <div className="absolute inset-0 bg-purple-500/30 blur-xl"></div>
+  </span>
                     </h1>
+
 
                     {/* Animated Underline */}
                     <motion.div
@@ -155,19 +177,19 @@ const FuturisticHero = () => {
                     transition={{ duration: 0.7, delay: 0.8 }}
                     className="mb-10 relative"
                 >
-                    <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed">
+                    <p className="text-base md:text-lg text-white max-w-2xl leading-relaxed">
                         <AnimatedText
-                            text="JR Studios is a software company that turns your ideas into code —"
+                            text=""
                             direction="up"
                             delay={0.9}
                             className="font-light"
-                        />
+                        >Your Website Should Work Harder Than You Do <br/></AnimatedText>
                         <AnimatedText
-                            text=" not even just code, it's our creation!"
+                            text=""
                             direction="up"
                             delay={1}
                             className="text-purple-200 font-medium"
-                        />
+                        >We Build Sites That Sell, Save Time, and Automate Growth</AnimatedText>
                     </p>
 
                     {/* Decorative Elements */}
@@ -201,11 +223,11 @@ const FuturisticHero = () => {
                         {/* Button Content */}
                         <span className="relative z-10 flex items-center justify-center space-x-2">
               <AnimatedText
-                  text="INQUIRE"
+                  text=""
                   direction="up"
                   delay={1.3}
                   className="text-white font-medium tracking-wider"
-              />
+              >INQUIRE</AnimatedText>
 
                             {/* Arrow Animation */}
                             <motion.svg

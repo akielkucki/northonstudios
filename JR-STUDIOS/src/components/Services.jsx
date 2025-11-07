@@ -223,14 +223,14 @@ const FuturisticServices = ({id}) => {
                 "Crafting visually appealing and user-friendly website layouts, focusing on aesthetics and user experience to make your brand stand out.",
         },
         {
-            icon: "/icons/3d-modeling.png",
-            title: "3D Modeling",
+            icon: "/icons/software.svg",
+            title: "Software Development",
             description:
                 "Designing and rendering three-dimensional objects and environments for various purposes like gaming, film, architecture and virtual/augmented reality.",
         },
         {
-            icon: "/icons/graphic-design.png",
-            title: "Graphic Designing",
+            icon: "/icons/seo.svg",
+            title: "SEO",
             description:
                 "Producing visual content to communicate messages effectively, utilizing typography, imagery, and color theory to strengthen your brand identity.",
         },

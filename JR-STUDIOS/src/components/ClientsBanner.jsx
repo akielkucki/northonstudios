@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import AnimatedText from "@/components/ui/animatedtext";
+import {brand} from "@/lib/vars";
 
 
 // Animated hexagonal icon component
@@ -132,7 +133,7 @@ const ClientsBanner = () => {
                             >
                                 Why Our Clients <br/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 font-normal">
-                  Choose JR Studios
+                  Choose {brand.name}
                 </span>
                             </motion.h2>
                         </div>

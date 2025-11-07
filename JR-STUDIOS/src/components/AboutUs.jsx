@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import AnimatedText from "@/components/ui/animatedtext";
+import {brand} from "@/lib/vars";
 
 
 // Animated number counter component
@@ -163,7 +164,7 @@ const AboutUs = ({id}) => {
                             <div className="absolute inset-5 overflow-hidden rounded">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-transparent mix-blend-overlay z-10"></div>
                                 <Image
-                                    src="/imgs/jr-logo.png"
+                                    src="/brand/logo.png"
                                     alt="JR-Studios-Logo"
                                     className="object-contain"
                                     fill
@@ -230,7 +231,7 @@ const AboutUs = ({id}) => {
                             className="text-gray-300 leading-relaxed mb-8 text-lg"
                         >
                             <AnimatedText
-                                text="JR Studios is your gateway to innovation in the digital realm. We're not just a tech agency – we're a creative force that blends cutting-edge development with visionary design."
+                                text={`${brand.name} is your gateway to innovation in the digital realm. We're not just a tech agency – we're a creative force that blends cutting-edge development with visionary design.`}
                                 direction="up"
                                 delay={0.2}
                                 stagger={0.03}
@@ -257,25 +258,22 @@ const AboutUs = ({id}) => {
 
                             <motion.div variants={contentAnimation} className="flex">
                                 <div className="w-12 h-12 rounded-md bg-purple-900/20 border border-purple-500/30 flex items-center justify-center mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
+                                    <Image src={"/icons/software.svg"} alt={"Software Icon"} width={80} height={80} className={"h-6 w-6"}/>
                                 </div>
                                 <div>
-                                    <h3 className="text-white text-lg font-medium mb-1">Graphic Design</h3>
-                                    <p className="text-gray-400 text-sm">Creating stunning visuals that capture your brand's essence and captivate your audience.</p>
+                                    <h3 className="text-white text-lg font-medium mb-1">Software Development</h3>
+                                    <p className="text-gray-400 text-sm">We build high-performance, scalable software tailored to your business goals.</p>
                                 </div>
                             </motion.div>
 
                             <motion.div variants={contentAnimation} className="flex">
                                 <div className="w-12 h-12 rounded-md bg-purple-900/20 border border-purple-500/30 flex items-center justify-center mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                                    </svg>
+                                    <Image src={"/icons/seo.svg"} alt={"SEO Icon"} width={80} height={80} className={"h-6 w-6"}/>
+
                                 </div>
                                 <div>
-                                    <h3 className="text-white text-lg font-medium mb-1">3D Modeling</h3>
-                                    <p className="text-gray-400 text-sm">Bringing ideas to life with intricate 3D models for diverse applications and industries.</p>
+                                    <h3 className="text-white text-lg font-medium mb-1">SEO Optimization</h3>
+                                    <p className="text-gray-400 text-sm">We specialize in building fast, scalable, and secure web and mobile applications tailored to your business needs. </p>
                                 </div>
                             </motion.div>
                         </motion.div>

@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaDiscord, FaGem, FaEnvelope } from 'react-icons/fa';
+import {brand} from "@/lib/vars";
+import {Mountain, MountainSnow} from "lucide-react";
 
 const FooterLink = ({ href, children }) => {
   return (
@@ -134,11 +136,11 @@ const FuturisticFooter = () => {
                   <div className="relative mr-2">
                     <div className="absolute inset-0 bg-purple-600/30 rounded-lg blur-md"></div>
                     <div className="relative w-10 h-10 flex items-center justify-center rounded-lg border border-purple-500/50 bg-black/70">
-                      <FaGem className="text-purple-400" />
+                      <MountainSnow className="text-purple-400" />
                     </div>
                   </div>
                   <h2 className="text-white text-xl font-medium">
-                    <span className="text-purple-400">JR</span> Studios
+                    <span className="text-purple-400">{brand.name.split(" ")[0]}</span> {brand.name.split(" ")[1]}
                   </h2>
                 </div>
                 <p className="text-gray-400 font-light leading-relaxed">
@@ -195,7 +197,7 @@ const FuturisticFooter = () => {
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
                   <FooterLink
-                      href="https://docs.google.com/document/d/19YBrtZ6MGNb3mbHUpn9sLbFruFUwCAXJ2Xs-OhXf7mA/edit?tab=t.0"
+                      href="/terms" //https://docs.google.com/document/d/19YBrtZ6MGNb3mbHUpn9sLbFruFUwCAXJ2Xs-OhXf7mA/edit?tab=t.0
                   >
                     Terms Of Service
                   </FooterLink>
@@ -229,8 +231,8 @@ const FuturisticFooter = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 font-light">Email</p>
-                      <a href="mailto:team@jrstudios.co" className="text-white hover:text-purple-400 transition-colors">
-                        team@jrstudios.co
+                      <a href={`mailto:${brand.email}`} className="text-white hover:text-purple-400 transition-colors">
+                        {brand.email}
                       </a>
                     </div>
                   </div>
@@ -260,7 +262,7 @@ const FuturisticFooter = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">
-                © 2025, <span className="text-purple-400 font-medium">JR Studios</span>. All rights reserved.
+                © 2025, <span className="text-purple-400 font-medium">{brand.name}</span>. All rights reserved.
               </p>
 
               <motion.div
@@ -271,7 +273,7 @@ const FuturisticFooter = () => {
               >
                 <div className="h-1 w-1 rounded-full bg-purple-500 mr-2"></div>
                 <p className="text-gray-400 text-sm">
-                  Crafted with <span className="text-purple-400">♦</span> by JR Studios
+                  Crafted with <span className="text-purple-400">♦</span> by {brand.name}
                 </p>
               </motion.div>
             </div>
