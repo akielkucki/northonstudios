@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import {AnimatePresence, motion, useScroll, useTransform} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import AnimatedText from "@/components/ui/animatedtext";
+import {brand} from "@/lib/vars";
 
 const AnimatedInput = ({
                          type = "text",
@@ -350,7 +351,7 @@ const Contact = ({id}) => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <a href="mailto:team@jrstudios.co" className="text-white hover:text-purple-300 transition-colors">team@jrstudios.co</a>
+                      <a href={`mailto:${brand.email}`} className="text-white hover:text-purple-300 transition-colors">{brand.email}</a>
                     </div>
                   </motion.div>
 
@@ -378,7 +379,7 @@ const Contact = ({id}) => {
                 {/* Action buttons */}
                 <div className="flex flex-wrap gap-4">
                   <motion.a
-                      href='mailto:team@jrstudios.co'
+                      href={`mailto:${brand.email}`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       initial={{ opacity: 0, y: 20 }}
