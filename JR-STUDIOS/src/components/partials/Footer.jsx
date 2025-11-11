@@ -144,7 +144,7 @@ const FuturisticFooter = () => {
                   </h2>
                 </div>
                 <p className="text-gray-400 font-light leading-relaxed">
-                  JR Studios is a software company that turns your ideas into code — not even just code, it's our creation!
+                  {brand.name} is a software company that turns your ideas into code — not even just code, it's our creation!
                 </p>
 
                 <motion.div
