@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaDiscord, FaGem, FaEnvelope } from 'react-icons/fa';
-import {brand} from "@/lib/vars";
+import {brand, services} from "@/lib/vars";
 import {Mountain, MountainSnow} from "lucide-react";
 
 const FooterLink = ({ href, children }) => {
@@ -92,20 +92,9 @@ const FuturisticFooter = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="flex items-center gap-6"
               >
-                <a
-                    href="https://discord.gg/6PGfR2N742"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative"
-                >
-                  <div className="absolute inset-0 bg-purple-600/20 rounded-full blur-md group-hover:bg-purple-600/30 transition-colors duration-300"></div>
-                  <div className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full border border-purple-500/50 bg-black/50 backdrop-blur-sm group-hover:border-purple-400 transition-colors duration-300">
-                    <FaDiscord className="text-purple-400 text-lg group-hover:text-white transition-colors duration-300" />
-                  </div>
-                </a>
 
                 <a
-                    href="mailto:team@jrstudios.co"
+                    href={`mailto:${brand.email}`}
                     className="group relative"
                 >
                   <div className="absolute inset-0 bg-purple-600/20 rounded-full blur-md group-hover:bg-purple-600/30 transition-colors duration-300"></div>
@@ -172,10 +161,9 @@ const FuturisticFooter = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                  <FooterLink href="#web-design">Web Design</FooterLink>
-                  <FooterLink href="#web-development">Web Development</FooterLink>
-                  <FooterLink href="#graphic-design">Graphic Design</FooterLink>
-                  <FooterLink href="#3d-modeling">3D Modeling</FooterLink>
+                  {services.map((service, index) => (<FooterLink key={index} href={`#${service.title}`}>{service.title}</FooterLink>))}
+
+
                 </motion.div>
               </div>
 
@@ -237,17 +225,6 @@ const FuturisticFooter = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 rounded-lg bg-purple-900/20 border border-purple-500/30 flex items-center justify-center mr-3 mt-1">
-                      <FaDiscord className="text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-gray-400 font-light">Discord</p>
-                      <a href="https://discord.gg/6PGfR2N742" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-400 transition-colors">
-                        Join our community
-                      </a>
-                    </div>
-                  </div>
                 </motion.div>
               </div>
             </div>
