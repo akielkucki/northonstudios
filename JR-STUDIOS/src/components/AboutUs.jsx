@@ -194,28 +194,28 @@ const AboutUs = ({id}) => {
                         </motion.div>
 
                         {/* Stats Section */}
-                        <motion.div
-                            ref={statsRef}
-                            className="grid grid-cols-2 gap-8 mt-10"
-                            variants={contentAnimation}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.3 }}
-                        >
-                            <motion.div variants={contentAnimation} className="bg-black/30 backdrop-blur-sm border border-purple-500/20 p-6 rounded-md">
-                                <h3 className="text-4xl font-light text-white mb-2">
-                                    <CounterAnimation target="120" className="text-purple-300 font-medium" />
-                                </h3>
-                                <p className="text-gray-400 text-sm">Successful Projects</p>
-                            </motion.div>
+                        {/*<motion.div*/}
+                        {/*    ref={statsRef}*/}
+                        {/*    className="grid grid-cols-2 gap-8 mt-10"*/}
+                        {/*    variants={contentAnimation}*/}
+                        {/*    initial="hidden"*/}
+                        {/*    whileInView="visible"*/}
+                        {/*    viewport={{ once: true, amount: 0.3 }}*/}
+                        {/*>*/}
+                        {/*    <motion.div variants={contentAnimation} className="bg-black/30 backdrop-blur-sm border border-purple-500/20 p-6 rounded-md">*/}
+                        {/*        <h3 className="text-4xl font-light text-white mb-2">*/}
+                        {/*            <CounterAnimation target="0" className="text-purple-300 font-medium" />*/}
+                        {/*        </h3>*/}
+                        {/*        <p className="text-gray-400 text-sm">Successful Projects</p>*/}
+                        {/*    </motion.div>*/}
 
-                            <motion.div variants={contentAnimation} className="bg-black/30 backdrop-blur-sm border border-purple-500/20 p-6 rounded-md">
-                                <h3 className="text-4xl font-light text-white mb-2">
-                                    <CounterAnimation target="95" className="text-purple-300 font-medium" />
-                                </h3>
-                                <p className="text-gray-400 text-sm">Happy Clients</p>
-                            </motion.div>
-                        </motion.div>
+                        {/*    <motion.div variants={contentAnimation} className="bg-black/30 backdrop-blur-sm border border-purple-500/20 p-6 rounded-md">*/}
+                        {/*        <h3 className="text-4xl font-light text-white mb-2">*/}
+                        {/*            <CounterAnimation target="0" className="text-purple-300 font-medium" />*/}
+                        {/*        </h3>*/}
+                        {/*        <p className="text-gray-400 text-sm">Happy Clients</p>*/}
+                        {/*    </motion.div>*/}
+                        {/*</motion.div>*/}
                     </div>
 
                     {/* Right Column - Text Content */}

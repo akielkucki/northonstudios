@@ -69,7 +69,7 @@ const VideoCard = () => {
             className="relative w-full md:w-auto shadow-[0_5px_35px_rgba(137,0,157,1)] ring-2 ring-purple-900"
         >
             <motion.video
-                src="/hero.mp4"
+                src="/herovideo.mp4"
                 autoPlay
                 initial={hasAnimated ? "visible" : "hidden"}
                 animate="visible"

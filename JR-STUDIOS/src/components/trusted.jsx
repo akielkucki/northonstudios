@@ -30,10 +30,10 @@ const Trusted = () => {
         <div className={cn("w-full overflow-hidden bg-black text-white py-12")}>
             <div className="mb-8 text-center">
                 <h2 className="text-2xl font-semibold text-gray-200 mb-4">
-                    Trusted by rapid growing industries worldwide
+                    Trusted by growing businesses across all industries
                 </h2>
                 <p className="text-gray-300">
-                    Our platform is used by the world&apos;s most innovative companies.
+                    Our platform empowers serious entrepreneur who are focused on achieving real, measurable growth.
                 </p>
             </div>
 

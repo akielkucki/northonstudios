@@ -285,7 +285,7 @@ const FuturisticTestimonials = ({id}) => {
               </CarouselContent>
 
               {/* Custom Nav Buttons */}
-              <div className="flex justify-center gap-2 mt-10">
+              <div className="flex justify-center items-center gap-2 mt-10">
                 <CarouselPrevious className="relative rounded-full bg-black/50 border border-purple-500/50 text-white hover:bg-purple-900/30 hover:border-purple-500 transition-all duration-300" />
 
                 {/* Dots Indicator */}

@@ -287,31 +287,6 @@ const ClientsBanner = () => {
                         <div className="relative group">
                             {/* Main image container with futuristic frame */}
                             <div className="relative overflow-hidden rounded-lg backdrop-blur-sm border border-purple-500/30 p-2">
-                                {/* Inner border */}
-                                <div className="absolute inset-0 border-2 border-dashed border-purple-500/20 rounded-lg opacity-80"></div>
-
-                                {/* Pulsing corners */}
-                                <div className="absolute top-0 left-0 w-5 h-5">
-                                    <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-                                        <path d="M0 0V50H50" stroke="#9333ea" strokeWidth="6" />
-                                    </svg>
-                                    <motion.div
-                                        className="absolute top-0 left-0 w-3 h-3 bg-purple-500 rounded-full"
-                                        animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
-                                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                                    />
-                                </div>
-                                <div className="absolute bottom-0 right-0 w-5 h-5">
-                                    <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-                                        <path d="M100 100V50H50" stroke="#9333ea" strokeWidth="6" />
-                                    </svg>
-                                    <motion.div
-                                        className="absolute bottom-0 right-0 w-3 h-3 bg-purple-500 rounded-full"
-                                        animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
-                                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                    />
-                                </div>
-
                                 {/* Image with parallax effect */}
                                 <motion.div
                                     className="relative h-[60vh] md:h-[450px] overflow-hidden rounded"
@@ -320,7 +295,7 @@ const ClientsBanner = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10"></div>
                                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-transparent mix-blend-overlay z-10"></div>
                                     <Image
-                                        src="/imgs/thanks.png"
+                                        src="/thankyou.png"
                                         alt="Client Appreciation"
                                         className="object-cover"
                                         fill
@@ -339,13 +314,13 @@ const ClientsBanner = () => {
                                     transition={{ duration: 0.5, delay: 1 }}
                                     className="flex flex-col"
                                 >
-                                    <span className="text-xs text-purple-300 font-mono">client.satisfaction</span>
+                                    <span className="text-xs text-purple-300 font-mono">dedicated.toYourSuccess();</span>
                                     <motion.span
                                         className="text-white text-lg font-medium"
                                         animate={{ opacity: [0.7, 1, 0.7] }}
                                         transition={{ duration: 4, repeat: Infinity }}
                                     >
-                                        99.8%
+                                        100%
                                     </motion.span>
                                 </motion.div>
                             </div>
