@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import './globals.css';
-import FuturisticNavbar from "@/components/NavBar";
+import NavBar from "@/components/NavBar";
+
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -13,30 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-    title: "JR Studios",
-    description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
-    keywords: "JR Studios, software development, tech solutions, digital innovation, brand empowerment, website development, website design, digital marketing, SEO, web development, UI/UX, conversion optimization, responsive design, 3d, 3d modeling, graphic, graphic designing",
+    title: "Northon Studios — Web Design & Automation Agency",
+    description:
+        "Northon Studios builds high-performing websites, automations, and digital systems that help real businesses grow. We turn complex ideas into clean, fast, and conversion-focused web experiences.",
+    keywords:
+        "Northon Studios, web design, Next.js development, automation agency, SaaS development, software development, digital marketing, SEO, UI/UX, web automation, lead generation, responsive websites, brand strategy, JR Studios partner",
     openGraph: {
-        title: "JR Studios",
-        description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
-        url: "https://jrstudios.co",
-        siteName: "JR Studios",
+        title: "Northon Studios — Web Design & Automation Agency",
+        description:
+            "We craft digital systems that convert. Northon Studios builds high-performing websites and automations for serious business owners focused on real growth.",
+        url: "https://northonstudios.com",
+        siteName: "Northon Studios",
         images: [
             {
-                url: "/imgs/jr-logo.png",
+                url: "/imgs/northon-logo.png",
                 width: 1200,
                 height: 630,
-                alt: "JR Studios Logo",
-            }
+                alt: "Northon Studios Logo",
+            },
         ],
         locale: "en_US",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "JR Studios - Empowering Brands In The Tech Age",
-        description: "JR Studios - Empowering Brands In The Tech Age. We turn your ideas into code, creating innovative solutions for the digital world.",
-        images: ["https://www.jrstudios.co/imgs/jr-logo.png"],
+        title: "Northon Studios — Web Design & Automation Agency",
+        description:
+            "Building websites and automations that help real businesses grow. Clean code, high conversion, real results.",
+        images: ["https://www.northonstudios.com/imgs/northon-logo.png"],
     },
     robots: {
         index: true,
@@ -44,25 +49,25 @@ export const metadata = {
         googleBot: {
             index: true,
             follow: true,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
         },
     },
-    canonical: "https://jrstudios.co",
+    canonical: "https://northonstudios.com",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="h-full">
-            <link rel="icon" type="image/svg+xml" href="/imgs/jr-logo.png" />
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-purple-500 selection:text-white font-thin`}
-            >
-                <div className="flex flex-col min-h-screen">
-                    <FuturisticNavbar />
-                    <main className="flex-grow">{children}</main>
-                </div>
-            </body>
+        <link rel="icon" type="image/png" href="/imgs/northon-logo.png" />
+        <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black selection:bg-blue-500 selection:text-white font-light`}
+        >
+        <div className="flex flex-col min-h-screen">
+            <NavBar />
+            <main className="flex-grow">{children}</main>
+        </div>
+        </body>
         </html>
     );
 }

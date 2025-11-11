@@ -4,6 +4,6 @@ export default function robots() {
             userAgent: '*',
             allow: '/'
         },
-        sitemap: 'https://jrstudios.co/sitemap.xml'
+        sitemap: 'https://northonstudios.com/sitemap.xml'
     }
 }
