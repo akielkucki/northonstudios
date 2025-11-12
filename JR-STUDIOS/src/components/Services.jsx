@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import {services} from "@/lib/vars";
-
+import Link from "next/link";
 
 // Futuristic service card component
 const ServiceCard = ({ service, isActive, index, onClick }) => {
@@ -108,6 +108,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
 
                 {/* View Details button - only shows when active */}
                 {isActive && (
+                    <Link href={`/services`} >
                     <motion.button
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -131,6 +132,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                             />
                         </svg>
                     </motion.button>
+                    </Link>
                 )}
             </div>
         </motion.div>
