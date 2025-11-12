@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import AnimatedText from "@/components/ui/animatedtext";
 import {brand} from "@/lib/vars";
+import Link from "next/link";
 
 
 // Animated hexagonal icon component
@@ -241,23 +242,24 @@ const ClientsBanner = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <motion.button
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 1.1 }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="mt-12 overflow-hidden rounded-md px-8 py-3 relative group"
-                        >
-                            {/* Button Background */}
-                            <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 opacity-90"></span>
+                        <Link href="/services" >
+                            <motion.button
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 1.1 }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="mt-12 overflow-hidden rounded-md px-8 py-3 relative group"
+                            >
+                                {/* Button Background */}
+                                <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 opacity-90"></span>
 
-                            {/* Button Shine Effect */}
-                            <span className="absolute h-full w-20 bg-white/20 -skew-x-30 -translate-x-32 group-hover:translate-x-64 transition-transform duration-1000"></span>
+                                {/* Button Shine Effect */}
+                                <span className="absolute h-full w-20 bg-white/20 -skew-x-30 -translate-x-32 group-hover:translate-x-64 transition-transform duration-1000"></span>
 
-                            {/* Button Content */}
-                            <span className="relative z-10 flex items-center justify-center text-white font-medium">
+                                {/* Button Content */}
+                                <span className="relative z-10 flex items-center justify-center text-white font-medium">
                 Explore Our Services
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +275,9 @@ const ClientsBanner = () => {
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </span>
-                        </motion.button>
+                            </motion.button>
+                        </Link>
+
                     </div>
 
                     {/* Right Side: Animated Image */}
@@ -314,14 +318,8 @@ const ClientsBanner = () => {
                                     transition={{ duration: 0.5, delay: 1 }}
                                     className="flex flex-col"
                                 >
-                                    <span className="text-xs text-purple-300 font-mono">dedicated.toYourSuccess();</span>
-                                    <motion.span
-                                        className="text-white text-lg font-medium"
-                                        animate={{ opacity: [0.7, 1, 0.7] }}
-                                        transition={{ duration: 4, repeat: Infinity }}
-                                    >
-                                        100%
-                                    </motion.span>
+                                    <div className="text-sm text-purple-300 font-mono"><span className={"text-white font-bold"}>100%</span> Dedicated to your success</div>
+
                                 </motion.div>
                             </div>
 

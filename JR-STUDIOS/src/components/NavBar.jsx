@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { Particles } from "@/components/magicui/particles";
 import Image from "next/image";
 import {brand} from "@/lib/vars";
+import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 const FuturisticNavbar = () => {
     const [activeNav, setActiveNav] = useState('HOME');
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isExpanded, setIsExpanded] = useState(false);
-
+    const route = usePathname()
     useEffect(() => {
         const handleScroll = () => {
             setScrollPosition(window.scrollY);
@@ -35,7 +37,7 @@ const FuturisticNavbar = () => {
             opacity: 1,
             scale: 1.05,
             textShadow: "0 0 12px rgba(233, 213, 255, 0.9)",
-            transition: { duration: 0.3 }
+            transition: { duration: 0.1 }
         }
     };
 
@@ -97,8 +99,34 @@ const FuturisticNavbar = () => {
                 {/* Nav Links - Futuristic Horizontal Navigation for Desktop */}
                 <div className={`md:flex ${isExpanded ? 'flex' : 'hidden'} flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0 transition-all duration-300`}>
                     <nav className="relative flex flex-col md:flex-row md:items-center md:bg-black/70 md:backdrop-blur-sm md:rounded-full md:border md:border-purple-500/50 md:px-3 md:py-1 w-full md:w-auto">
-                        {navItems.map((item, index) => (
-                            <motion.a
+                        {navItems.map((item, index) => {
+                            if (route.length > 1) return <Link
+                                key={item.id}
+                                className={`relative cursor-pointer text-white font-normal text-sm py-3 md:py-2 px-6 md:px-4 transition-all duration-300 ease-in ${
+                                    activeNav === item.id
+                                        ? 'text-purple-300 font-medium'
+                                        : 'text-white hover:text-white'
+                                } ${index !== navItems.length - 1 ? 'border-b md:border-b-0 border-purple-600/30' : ''}`}
+                                onMouseOver={() => setActiveNav(item.id)}
+                                href={`/#${item.id}`}
+                            >
+                                {item.label}
+                                {activeNav === item.id && (
+                                    <motion.div
+                                        layoutId="activeIndicator"
+                                        className="absolute bottom-0 left-0 h-0.5 bg-purple-400 w-full md:hidden"
+                                        transition={{ type: "spring", duration: 0.5 }}
+                                    />
+                                )}
+                                {activeNav === item.id && (
+                                    <motion.div
+                                        layoutId="activeDot"
+                                        className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-1.5 w-1.5 bg-purple-300 rounded-full hidden md:block"
+                                        transition={{ type: "spring", duration: 0.5 }}
+                                    />
+                                )}
+                            </Link>
+                            else return <motion.a
                                 key={item.id}
                                 variants={glowVariants}
                                 initial="initial"
@@ -129,7 +157,7 @@ const FuturisticNavbar = () => {
                                     />
                                 )}
                             </motion.a>
-                        ))}
+                        })}
 
                         {/* Animated Selection Indicator (Only visible on desktop) */}
 

@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import AnimatedText from "@/components/ui/animatedtext";
 import {brand} from "@/lib/vars";
-
+import Link from "next/link";
 
 // Animated number counter component
 const CounterAnimation = ({ target, duration = 2, className = "" }) => {
@@ -279,29 +279,31 @@ const AboutUs = ({id}) => {
                         </motion.div>
 
                         {/* CTA Button */}
-                        <motion.button
-                            variants={contentAnimation}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="mt-10 self-start group relative overflow-hidden rounded-md px-8 py-3"
-                        >
-                            {/* Button Background */}
-                            <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-500"></span>
+                        <Link href="/services">
+                            <motion.button
+                                variants={contentAnimation}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="mt-10 self-start group relative overflow-hidden rounded-md px-8 py-3"
+                            >
+                                {/* Button Background */}
+                                <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-500"></span>
 
-                            {/* Button Background Animation */}
-                            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                                {/* Button Background Animation */}
+                                <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
 
-                            {/* Shinning Effect */}
-                            <span className="absolute h-full w-1/3 bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[400%] transition-transform duration-1000"></span>
+                                {/* Shinning Effect */}
+                                <span className="absolute h-full w-1/3 bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[400%] transition-transform duration-1000"></span>
 
-                            {/* Button Content */}
-                            <span className="relative z-10 flex items-center justify-center text-white font-medium">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-                        </motion.button>
+                                {/* Button Content */}
+                                <span className="relative z-10 flex items-center justify-center text-white font-medium">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                            </motion.button>
+                        </Link>
                     </motion.div>
                 </div>
             </div>

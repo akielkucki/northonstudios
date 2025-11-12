@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import {useEffect, useMemo, useState} from "react";
 
 export const services = [
     {
@@ -78,7 +79,44 @@ export const services = [
     }
 ];
 
+
 export default function ServicesPage() {
+    const [orbs, setOrbs] = useState(() => []);
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    useEffect(() => {
+        function onMouseMove(event) {
+            setMousePos({ x: event.clientX, y: event.clientY });
+        }
+
+        window.addEventListener('mouseover', onMouseMove);
+        return () => window.removeEventListener('mouseover', onMouseMove);
+    }, []);
+
+    useEffect(() => {
+        const generatedOrbs = [];
+        const radius = 20; // Distance from mouse
+
+        for (let i = 0; i < 100; i++) {
+            // Convert index to angle (distribute evenly in circle)
+            const angle = (i / 100) * Math.PI * 2;
+
+            // Or for random angle: const angle = Math.random() * Math.PI * 2;
+
+            // Random distance within radius
+            const distance = Math.random() * radius;
+
+            generatedOrbs.push({
+                x: mousePos.x + Math.cos(angle) * distance,
+                y: mousePos.y + Math.sin(angle) * distance,
+                scale: Math.random() * 2 + 1,
+                opacity: Math.random(),
+                duration: 3 + Math.random() * 2,
+                delay: Math.random() * 2,
+            });
+        }
+
+        setOrbs(generatedOrbs);
+    }, [mousePos]);
     return (
         <div className="min-h-screen bg-black text-white relative overflow-hidden">
             {/* Animated Background */}
@@ -112,17 +150,17 @@ export default function ServicesPage() {
                 />
 
                 {/* Floating particles */}
-                {[...Array(20)].map((_, i) => (
+                {orbs.map((orb, idx) => (
                     <motion.div
-                        key={i}
+                        key={idx}
                         className="absolute w-1 h-1 bg-purple-400 rounded-full"
                         style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
+                            left: orb.x,
+                            top: orb.y,
                         }}
                         animate={{
                             y: [0, -30, 0],
-                            opacity: [0, 1, 0],
+                            opacity: [0, orb.opacity, 0],
                         }}
                         transition={{
                             duration: 3 + Math.random() * 2,
