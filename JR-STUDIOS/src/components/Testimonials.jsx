@@ -143,8 +143,10 @@ const FuturisticTestimonials = ({ id }) => {
   return (
       <section className="relative bg-black py-24 overflow-hidden" id={id}>
         {/* Subtle Background */}
+        <div
+            className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent opacity-50"></div>
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent"/>
         </div>
 
         {/* Content */}
@@ -152,30 +154,31 @@ const FuturisticTestimonials = ({ id }) => {
           {/* Header */}
           <div ref={headerRef} className="text-center mb-16">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
+                initial={{opacity: 0, y: 20}}
+                animate={headerInView ? {opacity: 1, y: 0} : {}}
+                transition={{duration: 0.6}}
                 className="inline-block mb-6 px-6 py-2 bg-neon-gold-800/10 backdrop-blur-sm border border-neon-gold-400/20 rounded-full"
             >
               <span className="text-neon-gold-300 text-xs font-medium tracking-wider uppercase">Testimonials</span>
             </motion.div>
 
             <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{opacity: 0, y: 20}}
+                animate={headerInView ? {opacity: 1, y: 0} : {}}
+                transition={{duration: 0.6, delay: 0.1}}
                 className="text-4xl md:text-5xl font-light text-white mb-4"
             >
               What People{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold-400 to-neon-gold-200 font-normal">
+              <span
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold-400 to-neon-gold-200 font-normal">
               Say About Us
             </span>
             </motion.h2>
 
             <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{opacity: 0, y: 20}}
+                animate={headerInView ? {opacity: 1, y: 0} : {}}
+                transition={{duration: 0.6, delay: 0.2}}
                 className="text-gray-400 max-w-2xl mx-auto text-sm"
             >
               Here's what our clients have to say about their experience working with our team.
@@ -184,19 +187,19 @@ const FuturisticTestimonials = ({ id }) => {
 
           {/* Carousel */}
           <motion.div
-              initial={{ opacity: 0 }}
-              animate={headerInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.7, delay: 0.3 }}
+              initial={{opacity: 0}}
+              animate={headerInView ? {opacity: 1} : {}}
+              transition={{duration: 0.7, delay: 0.3}}
           >
             <Carousel
-                opts={{ align: "start", loop: true }}
+                opts={{align: "start", loop: true}}
                 setApi={setApi}
                 className="w-full"
             >
               <CarouselContent className="-ml-4">
                 {reviews.map((review, index) => (
                     <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                      <TestimonialCard review={review} />
+                      <TestimonialCard review={review}/>
                     </CarouselItem>
                 ))}
               </CarouselContent>
@@ -209,17 +212,17 @@ const FuturisticTestimonials = ({ id }) => {
                   className="bg-black/40 border border-neon-gold-400/30 text-white hover:bg-black/60 hover:border-neon-gold-400/50 transition-all h-10 w-10 rounded-full flex items-center justify-center"
                   aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5"/>
               </button>
 
-              <ProgressIndicator current={activeIndex} total={reviews.length} onDotClick={handleDotClick} />
+              <ProgressIndicator current={activeIndex} total={reviews.length} onDotClick={handleDotClick}/>
 
               <button
                   onClick={scrollNext}
                   className="bg-black/40 border border-neon-gold-400/30 text-white hover:bg-black/60 hover:border-neon-gold-400/50 transition-all h-10 w-10 rounded-full flex items-center justify-center"
                   aria-label="Next testimonial"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5"/>
               </button>
             </div>
           </motion.div>
