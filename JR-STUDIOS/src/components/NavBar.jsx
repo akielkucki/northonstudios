@@ -50,7 +50,7 @@ const FuturisticNavbar = () => {
         hover: {
             opacity: 1,
             scale: 1.05,
-            textShadow: "0 0 12px rgba(233, 213, 255, 0.9)",
+            textShadow: "0 0 12px rgba(251, 191, 36, 0.9)",
             transition: { duration: 0.1 }
         }
     };
@@ -115,7 +115,7 @@ const FuturisticNavbar = () => {
         <header className="fixed w-full top-0 z-50">
             {/* Backdrop Layer - Animated for mobile */}
             <motion.div
-                className="absolute inset-0 backdrop-blur-md bg-black/70 border-b border-purple-600/50 z-0"
+                className="absolute inset-0 backdrop-blur-md bg-black/70 border-b border-neon-gold-400/50 z-0"
                 initial={false}
                 animate={{
                     height: isExpanded ? '100vh' : 'auto',
@@ -125,7 +125,7 @@ const FuturisticNavbar = () => {
 
             {/* Glow Effect */}
             <motion.div
-                className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/40 to-transparent z-0"
+                className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-neon-gold-600/40 to-transparent z-0"
                 initial={false}
                 animate={{
                     opacity: isExpanded ? 0.8 : 0.4,
@@ -140,7 +140,7 @@ const FuturisticNavbar = () => {
                 quantity={5}
                 ease={10}
                 size={4}
-                color={'#d8b4fe'}
+                color={'#FBBF24'}
                 refresh={false}
             />
 
@@ -157,28 +157,28 @@ const FuturisticNavbar = () => {
                     >
                         {/* Futuristic Logo */}
                         <div className="relative h-10 w-10 mr-2">
-                            <div className="absolute inset-0 bg-purple-500 rounded-full opacity-90"></div>
+                            <div className="absolute inset-0 bg-neon-gold-400 rounded-full opacity-90"></div>
                             <div className="absolute inset-1 bg-black rounded-full flex items-center justify-center">
                                 <span className="text-white text-xs font-medium"><Image src={"/brand/logo.png"} alt={`${brand.name} logo`} fill className={"rounded-full"}/></span>
                             </div>
-                            <div className="absolute -inset-1 bg-transparent border border-purple-300 rounded-full opacity-60 animate-pulse"></div>
+                            <div className="absolute -inset-1 bg-transparent border border-neon-gold-300 rounded-full opacity-60 animate-glow-pulse"></div>
                         </div>
 
                         <h2 className="text-xl text-white font-normal tracking-widest">
-                            <span className="text-purple-400 font-semibold">{brand.name.split(" ")[0]}</span>
+                            <span className="text-neon-gold-400 font-semibold">{brand.name.split(" ")[0]}</span>
                             <span className="ml-0.5 font-medium">{brand.name.split(" ")[1]}</span>
                         </h2>
                     </motion.div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center">
-                        <nav className="relative flex items-center bg-black/70 backdrop-blur-sm rounded-full border border-purple-500/50 px-3 py-1">
+                        <nav className="relative flex items-center bg-black/70 backdrop-blur-sm rounded-full border-neon-gold px-3 py-1">
                             {navItems.map((item, index) => {
                                 if (route.length > 1) return <Link
                                     key={item.id}
                                     className={`relative cursor-pointer text-white font-normal text-sm py-2 px-4 transition-all duration-300 ease-in ${
                                         activeNav === item.id
-                                            ? 'text-purple-300 font-medium'
+                                            ? 'text-neon-gold-300 font-medium'
                                             : 'text-white hover:text-white'
                                     }`}
                                     onMouseOver={() => setActiveNav(item.id)}
@@ -188,7 +188,7 @@ const FuturisticNavbar = () => {
                                     {activeNav === item.id && (
                                         <motion.div
                                             layoutId="activeDot"
-                                            className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-1.5 w-1.5 bg-purple-300 rounded-full"
+                                            className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-1.5 w-1.5 bg-neon-gold-300 rounded-full shadow-neon-gold"
                                             transition={{ type: "spring", duration: 0.5 }}
                                         />
                                     )}
@@ -200,7 +200,7 @@ const FuturisticNavbar = () => {
                                     whileHover="hover"
                                     className={`relative cursor-pointer text-white font-normal text-sm py-2 px-4 transition-all duration-300 ease-in ${
                                         activeNav === item.id
-                                            ? 'text-purple-300 font-medium'
+                                            ? 'text-neon-gold-300 font-medium'
                                             : 'text-white hover:text-white'
                                     }`}
                                     onMouseOver={() => setActiveNav(item.id)}
@@ -212,7 +212,7 @@ const FuturisticNavbar = () => {
                                     {activeNav === item.id && (
                                         <motion.div
                                             layoutId="activeDot"
-                                            className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-1.5 w-1.5 bg-purple-300 rounded-full"
+                                            className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-1.5 w-1.5 bg-neon-gold-300 rounded-full shadow-neon-gold"
                                             transition={{ type: "spring", duration: 0.5 }}
                                         />
                                     )}
@@ -222,8 +222,8 @@ const FuturisticNavbar = () => {
 
                         {/* Contact Button - Desktop */}
                         <motion.button
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(168, 85, 247, 0.7)" }}
-                            className="ml-4 bg-purple-600 border border-purple-400 text-white font-medium rounded-full py-2 px-6 text-sm flex items-center justify-center relative group"
+                            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(251, 191, 36, 0.7)" }}
+                            className="ml-4 bg-neon-gold-500 border-neon-gold text-white font-medium rounded-full py-2 px-6 text-sm flex items-center justify-center relative group"
                             onClick={() => {
                                 if (route.length > 1) {
                                     window.location.href = '/#contact';
@@ -232,7 +232,7 @@ const FuturisticNavbar = () => {
                                 }
                             }}
                         >
-                            <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-neon-gold-600 to-neon-gold-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                             <span className="relative z-10">CONTACT US</span>
                         </motion.button>
                     </div>
@@ -244,7 +244,7 @@ const FuturisticNavbar = () => {
                         className="md:hidden text-white relative z-50"
                     >
                         <motion.div
-                            className="w-6 h-0.5 bg-purple-300 mb-1.5"
+                            className="w-6 h-0.5 bg-neon-gold-300 mb-1.5"
                             animate={{
                                 rotate: isExpanded ? 45 : 0,
                                 y: isExpanded ? 8 : 0,
@@ -252,14 +252,14 @@ const FuturisticNavbar = () => {
                             transition={{ duration: 0.3 }}
                         />
                         <motion.div
-                            className="w-6 h-0.5 bg-purple-300 mb-1.5"
+                            className="w-6 h-0.5 bg-neon-gold-300 mb-1.5"
                             animate={{
                                 opacity: isExpanded ? 0 : 1,
                             }}
                             transition={{ duration: 0.2 }}
                         />
                         <motion.div
-                            className="w-6 h-0.5 bg-purple-300"
+                            className="w-6 h-0.5 bg-neon-gold-300"
                             animate={{
                                 rotate: isExpanded ? -45 : 0,
                                 y: isExpanded ? -8 : 0,
@@ -292,8 +292,8 @@ const FuturisticNavbar = () => {
                                                 href={`/#${item.id}`}
                                                 className={`block text-center text-white font-normal text-2xl py-4 transition-all duration-300 ${
                                                     activeNav === item.id
-                                                        ? 'text-purple-300 font-medium'
-                                                        : 'text-white hover:text-purple-300'
+                                                        ? 'text-neon-gold-300 font-medium'
+                                                        : 'text-white hover:text-neon-gold-300'
                                                 }`}
                                                 onClick={() => {
                                                     setActiveNav(item.id);
@@ -304,7 +304,7 @@ const FuturisticNavbar = () => {
                                                 {activeNav === item.id && (
                                                     <motion.div
                                                         layoutId="mobileActiveIndicator"
-                                                        className="h-0.5 bg-purple-400 w-24 mx-auto mt-2"
+                                                        className="h-0.5 bg-neon-gold-400 w-24 mx-auto mt-2 shadow-neon-gold"
                                                         transition={{ type: "spring", duration: 0.5 }}
                                                     />
                                                 )}
@@ -313,8 +313,8 @@ const FuturisticNavbar = () => {
                                             <motion.button
                                                 className={`w-full text-center text-white font-normal text-2xl py-4 transition-all duration-300 ${
                                                     activeNav === item.id
-                                                        ? 'text-purple-300 font-medium'
-                                                        : 'text-white hover:text-purple-300'
+                                                        ? 'text-neon-gold-300 font-medium'
+                                                        : 'text-white hover:text-neon-gold-300'
                                                 }`}
                                                 onClick={() => handleNavClick(item)}
                                             >
@@ -322,7 +322,7 @@ const FuturisticNavbar = () => {
                                                 {activeNav === item.id && (
                                                     <motion.div
                                                         layoutId="mobileActiveIndicator"
-                                                        className="h-0.5 bg-purple-400 w-24 mx-auto mt-2"
+                                                        className="h-0.5 bg-neon-gold-400 w-24 mx-auto mt-2 shadow-neon-gold"
                                                         transition={{ type: "spring", duration: 0.5 }}
                                                     />
                                                 )}
@@ -334,7 +334,7 @@ const FuturisticNavbar = () => {
                                 {/* Mobile Contact Button */}
                                 <motion.button
                                     variants={mobileItemVariants}
-                                    className="mt-8 bg-purple-600 border border-purple-400 text-white font-medium rounded-full py-3 px-8 text-lg flex items-center justify-center relative group w-full max-w-xs"
+                                    className="mt-8 bg-neon-gold-500 border-neon-gold text-white font-medium rounded-full py-3 px-8 text-lg flex items-center justify-center relative group w-full max-w-xs"
                                     onClick={() => {
                                         setIsExpanded(false);
                                         if (route.length > 1) {
@@ -347,7 +347,7 @@ const FuturisticNavbar = () => {
                                     }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                                    <span className="absolute inset-0 bg-gradient-to-r from-neon-gold-600 to-neon-gold-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                                     <span className="relative z-10">CONTACT US</span>
                                 </motion.button>
                             </div>

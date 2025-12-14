@@ -2,3 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-neon-gold {
+    color: #FBBF24;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.8),
+                 0 0 20px rgba(251, 191, 36, 0.6),
+                 0 0 30px rgba(251, 191, 36, 0.4);
+  }
+
+  .text-neon-white {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+
+  .border-neon-gold {
+    border-color: #FBBF24;
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.6),
+                inset 0 0 10px rgba(251, 191, 36, 0.3);
+  }
+
+  .border-neon-white {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .bg-neon-gold-glow {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.1) 100%);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+  }
+
+  .neon-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.2),
+                inset 0 0 20px rgba(251, 191, 36, 0.05);
+  }
+
+  .neon-card:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.4),
+                inset 0 0 30px rgba(251, 191, 36, 0.1);
+  }
+}
+

@@ -34,7 +34,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
             }}
             whileHover={{
                 scale: 1.02,
-                boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)"
+                boxShadow: "0 0 20px rgba(251, 191, 36, 0.4)"
             }}
             transition={{
                 duration: 0.6,
@@ -43,13 +43,12 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                 damping: 15,
                 layout: { duration: 0.6, type: "spring" },
             }}
-            onClick={onClick}
             className={`relative w-full max-w-md p-6 rounded-lg backdrop-blur-sm border 
                  transition-all duration-300 cursor-pointer z-10
                  ${
                 isActive
-                    ? "bg-black/70 border-purple-500 shadow-lg shadow-purple-500/30"
-                    : "bg-black/40 border-purple-500/30"
+                    ? "bg-black/70 border-neon-gold-400 shadow-lg shadow-neon-gold-400/30"
+                    : "bg-black/40 border-neon-gold-400/30"
             }`}
         >
             {/* Tech corner */}
@@ -57,7 +56,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                 <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
                     <path
                         d="M100 0V30H70"
-                        stroke={isActive ? "#a855f7" : "#a855f7"}
+                        stroke={isActive ? "#FBBF24" : "#FBBF24"}
                         strokeWidth="1.5"
                     />
                 </svg>
@@ -69,8 +68,8 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                     className={`relative w-16 h-16 mb-4 rounded-lg flex items-center justify-center
                        ${
                         isActive
-                            ? "bg-purple-900/40 border border-purple-400"
-                            : "bg-purple-900/20 border border-purple-500/30"
+                            ? "bg-neon-gold-800/40 border border-neon-gold-300"
+                            : "bg-neon-gold-800/20 border border-neon-gold-400/30"
                     }`}
                 >
                     <Image
@@ -84,7 +83,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                     {/* Pulsing effect when active */}
                     {isActive && (
                         <motion.div
-                            className="absolute inset-0 rounded-lg border border-purple-400"
+                            className="absolute inset-0 rounded-lg border border-neon-gold-300"
                             animate={{
                                 opacity: [0.2, 0.5, 0.2],
                                 scale: [1, 1.1, 1],
@@ -96,7 +95,7 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
 
                 <h3
                     className={`text-xl mb-3 font-medium ${
-                        isActive ? "text-purple-300" : "text-white"
+                        isActive ? "text-neon-gold-200" : "text-white"
                     }`}
                 >
                     {service.title}
@@ -113,8 +112,8 @@ const ServiceCard = ({ service, isActive, index, onClick }) => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="mt-6 px-5 py-2 bg-purple-800/60 border border-purple-500/50 rounded-full
-                     text-white text-sm font-medium flex items-center space-x-1 group hover:bg-purple-700/70"
+                        className="mt-6 px-5 py-2 bg-neon-gold-700/60 border border-neon-gold-400/50 rounded-full
+                     text-white text-sm font-medium flex items-center space-x-1 group hover:bg-neon-gold-600/70"
                     >
                         <span>View Details</span>
                         <svg
@@ -166,7 +165,7 @@ const Dot = ({ isActive, index }) => {
             {/* Outer ring */}
             <motion.div
                 className={`absolute inset-0 rounded-full ${
-                    isActive ? "bg-purple-500/30" : "bg-purple-500/10"
+                    isActive ? "bg-neon-gold-400/30" : "bg-neon-gold-400/10"
                 }`}
                 animate={{
                     scale: isActive ? [1, 1.8, 1] : [1, 1.2, 1],
@@ -183,20 +182,20 @@ const Dot = ({ isActive, index }) => {
             <motion.div
                 className={`relative w-4 h-4 rounded-full ${
                     isActive
-                        ? "bg-purple-500"
-                        : "bg-purple-700 border border-purple-500/50"
+                        ? "bg-neon-gold-400"
+                        : "bg-neon-gold-600 border border-neon-gold-400/50"
                 }`}
                 animate={{
                     boxShadow: isActive
                         ? [
-                            "0 0 0px rgba(168, 85, 247, 0.3)",
-                            "0 0 12px rgba(168, 85, 247, 0.8)",
-                            "0 0 0px rgba(168, 85, 247, 0.3)",
+                            "0 0 0px rgba(251, 191, 36, 0.3)",
+                            "0 0 12px rgba(251, 191, 36, 0.8)",
+                            "0 0 0px rgba(251, 191, 36, 0.3)",
                         ]
                         : [
-                            "0 0 0px rgba(168, 85, 247, 0)",
-                            "0 0 5px rgba(168, 85, 247, 0.4)",
-                            "0 0 0px rgba(168, 85, 247, 0)",
+                            "0 0 0px rgba(251, 191, 36, 0)",
+                            "0 0 5px rgba(251, 191, 36, 0.4)",
+                            "0 0 0px rgba(251, 191, 36, 0)",
                         ],
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -288,11 +287,11 @@ const FuturisticServices = ({id}) => {
             {/* Background elements */}
             <div className="absolute inset-0">
                 {/* Background grid */}
-                <div className="absolute inset-0 bg-[radial-gradient(#a855f720_1px,transparent_1px)] [background-size:32px_32px] opacity-30"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(#FBBF2420_1px,transparent_1px)] [background-size:32px_32px] opacity-30"></div>
 
                 {/* Purple gradient blob */}
-                <div className="absolute top-1/4 -right-64 w-[500px] h-[500px] rounded-full bg-purple-800/20 blur-[100px]"></div>
-                <div className="absolute bottom-1/4 -left-64 w-[500px] h-[500px] rounded-full bg-purple-800/10 blur-[100px]"></div>
+                <div className="absolute top-1/4 -right-64 w-[500px] h-[500px] rounded-full bg-neon-gold-700/20 blur-[100px]"></div>
+                <div className="absolute bottom-1/4 -left-64 w-[500px] h-[500px] rounded-full bg-neon-gold-700/10 blur-[100px]"></div>
             </div>
 
             {/* Header Section */}
@@ -301,9 +300,9 @@ const FuturisticServices = ({id}) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="inline-block bg-purple-900/30 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-1 mb-4"
+                    className="inline-block bg-neon-gold-800/30 backdrop-blur-sm border border-neon-gold-400/30 rounded-full px-6 py-1 mb-4"
                 >
-          <span className="text-purple-300 text-sm font-medium tracking-wider">
+          <span className="text-neon-gold-200 text-sm font-medium tracking-wider">
             SERVICES
           </span>
                 </motion.div>
@@ -316,7 +315,7 @@ const FuturisticServices = ({id}) => {
                 >
                     Explore Our{" "}
                     <motion.span
-                        className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 font-normal relative inline-block"
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold-300 to-purple-200 font-normal relative inline-block"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{
                             opacity: 1,
@@ -329,7 +328,7 @@ const FuturisticServices = ({id}) => {
                     >
                         Services
                         <motion.span
-                            className="absolute -bottom-2 left-0 h-px w-0 bg-gradient-to-r from-purple-500 to-transparent"
+                            className="absolute -bottom-2 left-0 h-px w-0 bg-gradient-to-r from-neon-gold-400 to-transparent"
                             animate={{ width: "100%" }}
                             transition={{ duration: 1, delay: 0.8 }}
                         />
@@ -360,7 +359,7 @@ const FuturisticServices = ({id}) => {
                         {/* Connection line to next service */}
                         {index < services.length - 1 && (
                             <motion.div
-                                className={`absolute bottom-0 ${index % 2 === 0 ? 'left-28 md:left-1/3' : 'right-28 md:right-1/3'} w-px h-32 bg-gradient-to-b from-purple-500 to-transparent`}
+                                className={`absolute bottom-0 ${index % 2 === 0 ? 'left-28 md:left-1/3' : 'right-28 md:right-1/3'} w-px h-32 bg-gradient-to-b from-neon-gold-400 to-transparent`}
                                 initial={{ scaleY: 0, opacity: 0 }}
                                 whileInView={{ scaleY: 1, opacity: 1 }}
                                 viewport={{ threshold: 0.3 }}
@@ -393,7 +392,7 @@ const FuturisticServices = ({id}) => {
                                         viewport={{ threshold: 0.3 }}
                                         className="relative w-16 h-16 flex items-center justify-center"
                                     >
-                                        <div className="absolute inset-0 bg-purple-800/40 rounded-lg backdrop-blur-sm border border-purple-500/30"></div>
+                                        <div className="absolute inset-0 bg-neon-gold-700/40 rounded-lg backdrop-blur-sm border border-neon-gold-400/30"></div>
                                         <span className="relative z-10 text-4xl font-light text-white">
                       0{index + 1}
                     </span>
@@ -403,9 +402,9 @@ const FuturisticServices = ({id}) => {
                                                 className="absolute inset-0 rounded-lg"
                                                 animate={{
                                                     boxShadow: [
-                                                        "0 0 0px rgba(168, 85, 247, 0.3)",
-                                                        "0 0 15px rgba(168, 85, 247, 0.7)",
-                                                        "0 0 0px rgba(168, 85, 247, 0.3)",
+                                                        "0 0 0px rgba(251, 191, 36, 0.3)",
+                                                        "0 0 15px rgba(251, 191, 36, 0.7)",
+                                                        "0 0 0px rgba(251, 191, 36, 0.3)",
                                                     ],
                                                 }}
                                                 transition={{ duration: 2, repeat: Infinity }}

@@ -25,16 +25,16 @@ const HexIcon = ({ children, delay = 0 }) => {
             className="relative h-16 w-16 flex items-center justify-center"
         >
             {/* Outer hexagon */}
-            <div className="absolute inset-0 bg-purple-900/20 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-neon-gold-800/20 backdrop-blur-sm"></div>
 
             {/* Inner hexagon with glow */}
-            <div className="absolute inset-1.5 bg-black border border-purple-500/50 flex items-center justify-center">
-                <div className="text-purple-400 text-xl z-10">{children}</div>
+            <div className="absolute inset-1.5 bg-black border border-neon-gold-400/50 flex items-center justify-center">
+                <div className="text-neon-gold-300 text-xl z-10">{children}</div>
             </div>
 
             {/* Edge highlights */}
             <motion.div
-                className="absolute top-0 left-1/2 w-1/2 h-0.5 bg-purple-500/50"
+                className="absolute top-0 left-1/2 w-1/2 h-0.5 bg-neon-gold-400/50"
                 animate={{ opacity: [0.3, 0.7, 0.3] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -86,7 +86,7 @@ const ClientsBanner = () => {
                     {[1, 2, 3, 4, 5].map(i => (
                         <div
                             key={i}
-                            className="absolute h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+                            className="absolute h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent"
                             style={{
                                 top: `${15 * i}%`,
                                 right: '0',
@@ -99,7 +99,7 @@ const ClientsBanner = () => {
 
                 {/* Background blur circle */}
                 <motion.div
-                    className="absolute -right-64 top-1/4 w-96 h-96 rounded-full bg-purple-800/5 blur-3xl"
+                    className="absolute -right-64 top-1/4 w-96 h-96 rounded-full bg-neon-gold-600/5 blur-3xl"
                     style={{ y: useTransform(scrollYProgress, [0, 1], [100, -50]) }}
                 />
             </div>
@@ -119,9 +119,9 @@ const ClientsBanner = () => {
                                 className="flex items-center mb-4"
                             >
                                 {/* Modern badge design */}
-                                <div className="h-px w-8 bg-purple-600 mr-4"></div>
-                                <div className="bg-purple-900/30 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-1">
-                                    <span className="text-purple-300 text-sm font-medium tracking-wider">WHY US?</span>
+                                <div className="h-px w-8 bg-neon-gold-500 mr-4"></div>
+                                <div className="bg-neon-gold-800/30 backdrop-blur-sm border border-neon-gold-400/30 rounded-full px-4 py-1">
+                                    <span className="text-neon-gold-200 text-sm font-medium tracking-wider">WHY US?</span>
                                 </div>
                             </motion.div>
 
@@ -133,7 +133,7 @@ const ClientsBanner = () => {
                                 className="text-3xl md:text-4xl lg:text-5xl text-white font-light tracking-tight"
                             >
                                 Why Our Clients <br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 font-normal">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold-300 to-neon-gold-100 font-normal">
                   Choose {brand.name}
                 </span>
                             </motion.h2>
@@ -164,7 +164,7 @@ const ClientsBanner = () => {
                                             whileInView={{ width: '100%' }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.8, delay: 0.5 }}
-                                            className="h-px bg-gradient-to-r from-purple-600 to-transparent mt-1 w-12"
+                                            className="h-px bg-gradient-to-r from-neon-gold-500 to-transparent mt-1 w-12"
                                         />
                                     </h3>
                                     <p className="text-gray-300 font-light leading-relaxed">
@@ -198,7 +198,7 @@ const ClientsBanner = () => {
                                             whileInView={{ width: '100%' }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.8, delay: 0.7 }}
-                                            className="h-px bg-gradient-to-r from-purple-600 to-transparent mt-1 w-12"
+                                            className="h-px bg-gradient-to-r from-neon-gold-500 to-transparent mt-1 w-12"
                                         />
                                     </h3>
                                     <p className="text-gray-300 font-light leading-relaxed">
@@ -230,7 +230,7 @@ const ClientsBanner = () => {
                                             whileInView={{ width: '100%' }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.8, delay: 0.9 }}
-                                            className="h-px bg-gradient-to-r from-purple-600 to-transparent mt-1 w-12"
+                                            className="h-px bg-gradient-to-r from-neon-gold-500 to-transparent mt-1 w-12"
                                         />
                                     </h3>
                                     <p className="text-gray-300 font-light leading-relaxed">
@@ -253,7 +253,7 @@ const ClientsBanner = () => {
                                 className="mt-12 overflow-hidden rounded-md px-8 py-3 relative group"
                             >
                                 {/* Button Background */}
-                                <span className="absolute inset-0 bg-gradient-to-r from-purple-800 to-purple-600 opacity-90"></span>
+                                <span className="absolute inset-0 bg-gradient-to-r from-neon-gold-600 to-neon-gold-500 opacity-90"></span>
 
                                 {/* Button Shine Effect */}
                                 <span className="absolute h-full w-20 bg-white/20 -skew-x-30 -translate-x-32 group-hover:translate-x-64 transition-transform duration-1000"></span>
@@ -290,16 +290,16 @@ const ClientsBanner = () => {
                     >
                         <div className="relative group">
                             {/* Main image container with futuristic frame */}
-                            <div className="relative overflow-hidden rounded-lg backdrop-blur-sm border border-purple-500/30 p-2">
+                            <div className="relative overflow-hidden rounded-lg backdrop-blur-sm border border-neon-gold-400/30 p-2">
                                 {/* Image with parallax effect */}
                                 <motion.div
                                     className="relative h-[60vh] md:h-[450px] overflow-hidden rounded"
                                     style={{ y: imageTranslateY }}
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10"></div>
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-transparent mix-blend-overlay z-10"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-neon-gold-600/20 via-transparent to-transparent mix-blend-overlay z-10"></div>
                                     <Image
-                                        src="/thankyou.png"
+                                        src="/thankyou.jpeg"
                                         alt="Client Appreciation"
                                         className="object-cover"
                                         fill
@@ -310,7 +310,7 @@ const ClientsBanner = () => {
                             </div>
 
                             {/* Tech details overlay */}
-                            <div className="absolute -right-4 -bottom-4 px-4 py-2 bg-black/80 backdrop-blur-md border border-purple-500/30 rounded">
+                            <div className="absolute -right-4 -bottom-4 px-4 py-2 bg-black/80 backdrop-blur-md border border-neon-gold-400/30 rounded">
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
@@ -318,19 +318,19 @@ const ClientsBanner = () => {
                                     transition={{ duration: 0.5, delay: 1 }}
                                     className="flex flex-col"
                                 >
-                                    <div className="text-sm text-purple-300 font-mono"><span className={"text-white font-bold"}>100%</span> Dedicated to your success</div>
+                                    <div className="text-sm text-neon-gold-200 font-mono"><span className={"text-white font-bold"}>100%</span> Dedicated to your success</div>
 
                                 </motion.div>
                             </div>
 
                             {/* Tech line decorations */}
                             <motion.div
-                                className="absolute -right-8 top-1/3 w-16 h-px bg-gradient-to-r from-purple-500 to-transparent"
+                                className="absolute -right-8 top-1/3 w-16 h-px bg-gradient-to-r from-neon-gold-400 to-transparent"
                                 animate={{ opacity: [0.3, 0.8, 0.3], width: ['30px', '60px', '30px'] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                             />
                             <motion.div
-                                className="absolute -left-8 bottom-1/3 w-16 h-px bg-gradient-to-l from-purple-500 to-transparent"
+                                className="absolute -left-8 bottom-1/3 w-16 h-px bg-gradient-to-l from-neon-gold-400 to-transparent"
                                 animate={{ opacity: [0.3, 0.8, 0.3], width: ['30px', '60px', '30px'] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
                             />

@@ -11,14 +11,14 @@ const FooterLink = ({ href, children }) => {
   return (
       <motion.a
           href={href}
-          className="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group mb-3"
+          className="text-gray-300 hover:text-neon-gold-300 transition-colors duration-300 flex items-center group mb-3"
           whileHover={{ x: 5 }}
           whileTap={{ scale: 0.98 }}
       >
       <span className="relative overflow-hidden">
         <span className="relative z-10">{children}</span>
         <motion.span
-            className="absolute bottom-0 left-0 h-px w-0 bg-purple-500"
+            className="absolute bottom-0 left-0 h-px w-0 bg-neon-gold-400"
             initial={{ width: 0 }}
             whileHover={{ width: "100%" }}
             transition={{ duration: 0.3 }}
@@ -60,20 +60,20 @@ const FuturisticFooter = () => {
         {/* Background Elements */}
         <div className="absolute inset-0 z-0">
           {/* Background grid */}
-          <div className="absolute inset-0 bg-[radial-gradient(#a855f720_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(#FBBF2420_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
 
           {/* Accent lighting */}
-          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50"></div>
+          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent opacity-50"></div>
 
           {/* Ambient glow */}
-          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-purple-900/10 blur-[100px]"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-neon-gold-600/10 blur-[100px]"></div>
         </div>
 
         {/* Social networks section */}
         <motion.section
             ref={socialsRef}
             style={{ opacity, y }}
-            className="relative z-10 border-b border-purple-900/50 backdrop-blur-sm"
+            className="relative z-10 border-b border-neon-gold-600/50 backdrop-blur-sm"
         >
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -97,9 +97,9 @@ const FuturisticFooter = () => {
                     href={`mailto:${brand.email}`}
                     className="group relative"
                 >
-                  <div className="absolute inset-0 bg-purple-600/20 rounded-full blur-md group-hover:bg-purple-600/30 transition-colors duration-300"></div>
-                  <div className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full border border-purple-500/50 bg-black/50 backdrop-blur-sm group-hover:border-purple-400 transition-colors duration-300">
-                    <FaEnvelope className="text-purple-400 text-lg group-hover:text-white transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-neon-gold-500/20 rounded-full blur-md group-hover:bg-neon-gold-500/30 transition-colors duration-300"></div>
+                  <div className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full border border-neon-gold-400/50 bg-black/50 backdrop-blur-sm group-hover:border-neon-gold-300 transition-colors duration-300">
+                    <FaEnvelope className="text-neon-gold-300 text-lg group-hover:text-white transition-colors duration-300" />
                   </div>
                 </a>
               </motion.div>
@@ -123,13 +123,13 @@ const FuturisticFooter = () => {
               >
                 <div className="mb-6 flex items-center">
                   <div className="relative mr-2">
-                    <div className="absolute inset-0 bg-purple-600/30 rounded-lg blur-md"></div>
-                    <div className="relative w-10 h-10 flex items-center justify-center rounded-lg border border-purple-500/50 bg-black/70">
-                      <MountainSnow className="text-purple-400" />
+                    <div className="absolute inset-0 bg-neon-gold-500/30 rounded-lg blur-md"></div>
+                    <div className="relative w-10 h-10 flex items-center justify-center rounded-lg border border-neon-gold-400/50 bg-black/70">
+                      <MountainSnow className="text-neon-gold-300" />
                     </div>
                   </div>
                   <h2 className="text-white text-xl font-medium">
-                    <span className="text-purple-400">{brand.name.split(" ")[0]}</span> {brand.name.split(" ")[1]}
+                    <span className="text-neon-gold-300">{brand.name.split(" ")[0]}</span> {brand.name.split(" ")[1]}
                   </h2>
                 </div>
                 <p className="text-gray-400 font-light leading-relaxed">
@@ -140,7 +140,7 @@ const FuturisticFooter = () => {
                     initial={{ opacity: 0, width: 0 }}
                     animate={logoInView ? { opacity: 1, width: "40%" } : {}}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="h-px bg-gradient-to-r from-purple-500 to-transparent mt-6"
+                    className="h-px bg-gradient-to-r from-neon-gold-400 to-transparent mt-6"
                 />
               </motion.div>
 
@@ -214,12 +214,12 @@ const FuturisticFooter = () => {
                     className="space-y-4"
                 >
                   <div className="flex items-start">
-                    <div className="w-10 h-10 rounded-lg bg-purple-900/20 border border-purple-500/30 flex items-center justify-center mr-3 mt-1">
-                      <FaEnvelope className="text-purple-400" />
+                    <div className="w-10 h-10 rounded-lg bg-neon-gold-800/20 border border-neon-gold-400/30 flex items-center justify-center mr-3 mt-1">
+                      <FaEnvelope className="text-neon-gold-300" />
                     </div>
                     <div>
                       <p className="text-gray-400 font-light">Email</p>
-                      <a href={`mailto:${brand.email}`} className="text-white hover:text-purple-400 transition-colors">
+                      <a href={`mailto:${brand.email}`} className="text-white hover:text-neon-gold-300 transition-colors">
                         {brand.email}
                       </a>
                     </div>
@@ -233,13 +233,13 @@ const FuturisticFooter = () => {
 
         {/* Copyright */}
         <motion.div
-            className="relative z-10 py-6 border-t border-purple-900/50 backdrop-blur-sm"
+            className="relative z-10 py-6 border-t border-neon-gold-600/50 backdrop-blur-sm"
             style={{ opacity }}
         >
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">
-                © 2025, <span className="text-purple-400 font-medium">{brand.name}</span>. All rights reserved.
+                © 2025, <span className="text-neon-gold-300 font-medium">{brand.name}</span>. All rights reserved.
               </p>
 
               <motion.div
@@ -248,9 +248,9 @@ const FuturisticFooter = () => {
                   viewport={{ once: true }}
                   className="flex items-center"
               >
-                <div className="h-1 w-1 rounded-full bg-purple-500 mr-2"></div>
+                <div className="h-1 w-1 rounded-full bg-neon-gold-400 mr-2"></div>
                 <p className="text-gray-400 text-sm">
-                  Crafted with <span className="text-purple-400">♦</span> by {brand.name}
+                  Crafted with <span className="text-neon-gold-300">♦</span> by {brand.name}
                 </p>
               </motion.div>
             </div>

@@ -40,19 +40,19 @@ const AnimatedInput = ({
             }
           } : {}}
       >
-        <div className="absolute inset-0 rounded-lg bg-purple-600/5 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 rounded-lg bg-neon-gold-500/5 backdrop-blur-sm"></div>
 
         {/* Tech corner */}
         <div className="absolute top-0 left-0 w-5 h-5 pointer-events-none">
           <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-            <path d="M0 0V30H30" stroke={isFocused ? "#a855f7" : "#7e22ce"} strokeWidth="2" />
+            <path d="M0 0V30H30" stroke={isFocused ? "#FBBF24" : "#F59E0B"} strokeWidth="2" />
           </svg>
         </div>
 
         {/* Input container */}
         <div className="relative flex items-center">
           {icon && (
-              <div className="absolute left-3 text-purple-400">
+              <div className="absolute left-3 text-neon-gold-300">
                 {icon}
               </div>
           )}
@@ -66,7 +66,7 @@ const AnimatedInput = ({
                   placeholder={placeholder}
                   onFocus={() => setIsFocused(true)}
                   onBlur={() => setIsFocused(false)}
-                  className={`w-full bg-black/50 border ${isFocused ? 'border-purple-500' : 'border-purple-700/50'} outline-none rounded-lg text-base p-4 ${icon ? 'pl-10' : 'pl-4'} text-white transition-all duration-300 backdrop-blur-sm resize-none ${className}`}
+                  className={`w-full bg-black/50 border ${isFocused ? 'border-neon-gold-400' : 'border-neon-gold-600/50'} outline-none rounded-lg text-base p-4 ${icon ? 'pl-10' : 'pl-4'} text-white transition-all duration-300 backdrop-blur-sm resize-none ${className}`}
                   {...props}
               />
           ) : (
@@ -79,14 +79,14 @@ const AnimatedInput = ({
                   placeholder={placeholder}
                   onFocus={() => setIsFocused(true)}
                   onBlur={() => setIsFocused(false)}
-                  className={`w-full bg-black/50 border ${isFocused ? 'border-purple-500' : 'border-purple-700/50'} outline-none rounded-lg text-base p-4 ${icon ? 'pl-10' : 'pl-4'} text-white transition-all duration-300 backdrop-blur-sm ${className}`}
+                  className={`w-full bg-black/50 border ${isFocused ? 'border-neon-gold-400' : 'border-neon-gold-600/50'} outline-none rounded-lg text-base p-4 ${icon ? 'pl-10' : 'pl-4'} text-white transition-all duration-300 backdrop-blur-sm ${className}`}
                   {...props}
               />
           )}
 
           {/* Animated focus indicator */}
           <motion.div
-              className="absolute bottom-0 left-0 h-0.5 bg-purple-600"
+              className="absolute bottom-0 left-0 h-0.5 bg-neon-gold-500"
               initial={{ width: "0%" }}
               animate={{ width: isFocused ? "100%" : "0%" }}
               transition={{ duration: 0.3 }}
@@ -149,7 +149,7 @@ const Contact = ({id}) => {
         embeds: [
           {
             title: `New Contact Form Submission`,
-            color: 0xa855f7, // Purple color
+            color: 0xFBBF24, // Gold color
             fields: [
               {
                 name: 'Business Name',
@@ -229,7 +229,7 @@ const Contact = ({id}) => {
     const count = formData.message.trim().length;
     if (count === 0) return 'text-gray-500';
     if (count < 50) return 'text-red-500';
-    return 'text-purple-400';
+    return 'text-neon-gold-300';
   };
 
   return (
@@ -241,18 +241,18 @@ const Contact = ({id}) => {
         {/* Background Elements */}
         <div className="absolute inset-0 z-0">
           {/* Gradient background instead of image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/10 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-neon-gold-800/10 to-black"></div>
 
           {/* Background grid */}
-          <div className="absolute inset-0 bg-[radial-gradient(#a855f720_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(#FBBF2420_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
 
           {/* Accent lighting */}
-          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50"></div>
-          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50"></div>
+          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent opacity-50"></div>
+          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent opacity-50"></div>
 
           {/* Ambient glow */}
-          <div className="absolute -top-64 -right-64 w-[500px] h-[500px] rounded-full bg-purple-800/10 blur-[100px]"></div>
-          <div className="absolute -bottom-64 -left-64 w-[500px] h-[500px] rounded-full bg-purple-800/10 blur-[100px]"></div>
+          <div className="absolute -top-64 -right-64 w-[500px] h-[500px] rounded-full bg-neon-gold-600/10 blur-[100px]"></div>
+          <div className="absolute -bottom-64 -left-64 w-[500px] h-[500px] rounded-full bg-neon-gold-600/10 blur-[100px]"></div>
         </div>
 
         {/* Content Wrapper */}
@@ -269,12 +269,12 @@ const Contact = ({id}) => {
                 transition={{ duration: 0.8 }}
                 className="w-full lg:w-2/5 flex flex-col justify-center"
             >
-              <div className="bg-black/40 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-10 h-full">
+              <div className="bg-black/40 backdrop-blur-sm border border-neon-gold-500/30 rounded-2xl p-10 h-full">
                 {/* Section title with tech accent */}
                 <div className="relative mb-6">
                   <div className="absolute top-0 left-0 w-10 h-10">
                     <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-                      <path d="M0 0V30H30" stroke="#a855f7" strokeWidth="2" />
+                      <path d="M0 0V30H30" stroke="#FBBF24" strokeWidth="2" />
                     </svg>
                   </div>
 
@@ -283,9 +283,9 @@ const Contact = ({id}) => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="inline-block mb-4 ml-6 bg-purple-900/30 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-1"
+                      className="inline-block mb-4 ml-6 bg-neon-gold-800/30 backdrop-blur-sm border border-neon-gold-400/30 rounded-full px-6 py-1"
                   >
-                    <span className="text-purple-300 text-sm font-medium tracking-wider">GET IN TOUCH</span>
+                    <span className="text-neon-gold-200 text-sm font-medium tracking-wider">GET IN TOUCH</span>
                   </motion.h4>
                 </div>
 
@@ -298,7 +298,7 @@ const Contact = ({id}) => {
                 >
                   Let's Create{" "}
                   <motion.span
-                      className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 font-normal relative inline-block"
+                      className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold-300 to-neon-gold-100 font-normal relative inline-block"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{
                         opacity: 1,
@@ -312,7 +312,7 @@ const Contact = ({id}) => {
                   >
                     Something Great
                     <motion.span
-                        className="absolute -bottom-2 left-0 h-px w-0 bg-gradient-to-r from-purple-500 to-transparent"
+                        className="absolute -bottom-2 left-0 h-px w-0 bg-gradient-to-r from-neon-gold-400 to-transparent"
                         animate={{ width: "100%" }}
                         transition={{ duration: 1, delay: 0.8 }}
                     />
@@ -343,15 +343,15 @@ const Contact = ({id}) => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.5 }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-purple-900/20 border border-purple-500/30 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="w-12 h-12 rounded-lg bg-neon-gold-800/20 border border-neon-gold-400/30 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neon-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                       </svg>
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <a href={`mailto:${brand.email}`} className="text-white hover:text-purple-300 transition-colors">{brand.email}</a>
+                      <a href={`mailto:${brand.email}`} className="text-white hover:text-neon-gold-200 transition-colors">{brand.email}</a>
                     </div>
                   </motion.div>
 
@@ -362,8 +362,8 @@ const Contact = ({id}) => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.6 }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-purple-900/20 border border-purple-500/30 flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="w-12 h-12 rounded-lg bg-neon-gold-800/20 border border-neon-gold-400/30 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neon-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"></circle>
                         <circle cx="12" cy="10" r="3"></circle>
                         <path d="M7 20.662V19c0-1.657 2.239-3 5-3s5 1.343 5 3v1.662"></path>
@@ -371,7 +371,7 @@ const Contact = ({id}) => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Discord</p>
-                      <a href="https://discord.gg/6PGfR2N742" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-300 transition-colors">Join our community</a>
+                      <a href="https://discord.gg/6PGfR2N742" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neon-gold-200 transition-colors">Join our community</a>
                     </div>
                   </motion.div>
                 </div>
@@ -389,7 +389,7 @@ const Contact = ({id}) => {
                       className="group relative overflow-hidden rounded-full px-6 py-3"
                   >
                     {/* Button Background */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-500 opacity-90"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-neon-gold-600 to-neon-gold-400 opacity-90"></span>
 
                     {/* Button Shine Effect */}
                     <span className="absolute h-full w-20 bg-white/20 -skew-x-30 -translate-x-32 group-hover:translate-x-64 transition-transform duration-1000"></span>
@@ -413,10 +413,10 @@ const Contact = ({id}) => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.8 }}
-                      className="relative overflow-hidden rounded-full px-6 py-3 border border-purple-500/50 text-white group"
+                      className="relative overflow-hidden rounded-full px-6 py-3 border border-neon-gold-400/50 text-white group"
                   >
                     {/* Button Hover Background */}
-                    <span className="absolute inset-0 bg-purple-600/0 group-hover:bg-purple-600/20 transition-colors duration-300"></span>
+                    <span className="absolute inset-0 bg-neon-gold-500/0 group-hover:bg-neon-gold-500/20 transition-colors duration-300"></span>
 
                     {/* Button Content */}
                     <span className="relative z-10 flex items-center justify-center font-medium">
@@ -439,7 +439,7 @@ const Contact = ({id}) => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="w-full lg:w-3/5"
             >
-              <div className="bg-black/40 backdrop-blur-sm border border-purple-600/30 rounded-2xl p-10">
+              <div className="bg-black/40 backdrop-blur-sm border border-neon-gold-500/30 rounded-2xl p-10">
                 <motion.h3
                     initial={{ opacity: 0, y: 20 }}
                     animate={formInView ? { opacity: 1, y: 0 } : {}}
@@ -568,7 +568,7 @@ const Contact = ({id}) => {
                         className="group relative overflow-hidden rounded-lg w-full py-4 text-white font-medium"
                     >
                       {/* Button Background */}
-                      <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-500 opacity-90"></span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-neon-gold-600 to-neon-gold-400 opacity-90"></span>
 
                       {/* Button Shine Effect */}
                       <span className="absolute h-full w-1/3 bg-white/20 -skew-x-30 -translate-x-full group-hover:translate-x-[400%] transition-transform duration-1000"></span>
@@ -596,9 +596,9 @@ const Contact = ({id}) => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0 }}
-                            className="bg-purple-900/30 border border-purple-500/50 rounded-lg p-4 mt-4"
+                            className="bg-neon-gold-800/30 border border-neon-gold-400/50 rounded-lg p-4 mt-4"
                         >
-                          <p className="text-center text-purple-200">
+                          <p className="text-center text-neon-gold-100">
                             {responseMessage}
                           </p>
                         </motion.div>

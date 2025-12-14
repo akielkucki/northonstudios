@@ -54,19 +54,19 @@ const FuturisticHero = () => {
             <div className="absolute inset-0 z-0">
                 {/* Abstract Grid Lines */}
                 <div className="absolute inset-0 opacity-30">
-                    <div className="h-px w-full bg-gradient-to-r from-transparent via-purple-500 to-transparent absolute top-1/4"></div>
-                    <div className="h-px w-full bg-gradient-to-r from-transparent via-purple-300 to-transparent absolute top-2/4"></div>
-                    <div className="h-px w-full bg-gradient-to-r from-transparent via-purple-500 to-transparent absolute top-3/4"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent absolute top-1/4"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-neon-gold-300 to-transparent absolute top-2/4"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent absolute top-3/4"></div>
 
-                    <div className="w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent absolute left-1/4"></div>
-                    <div className="w-px h-full bg-gradient-to-b from-transparent via-purple-300 to-transparent absolute left-2/4"></div>
-                    <div className="w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent absolute left-3/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-neon-gold-400 to-transparent absolute left-1/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-neon-gold-300 to-transparent absolute left-2/4"></div>
+                    <div className="w-px h-full bg-gradient-to-b from-transparent via-neon-gold-400 to-transparent absolute left-3/4"></div>
                 </div>
 
                 {/* Futuristic Circle */}
-                <div className="absolute -bottom-1/2 left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] rounded-full border border-purple-500/20"></div>
-                <div className="absolute -bottom-1/3 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] rounded-full border border-purple-400/30"></div>
-                <div className="absolute -bottom-1/4 left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] rounded-full border border-purple-300/40"></div>
+                <div className="absolute -bottom-1/2 left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] rounded-full border border-neon-gold-400/20 shadow-neon-gold"></div>
+                <div className="absolute -bottom-1/3 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] rounded-full border border-neon-gold-300/30 shadow-neon-gold"></div>
+                <div className="absolute -bottom-1/4 left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] rounded-full border border-white/40 shadow-neon-white"></div>
             </div>
 
             {/* Main Content Container */}
@@ -78,18 +78,18 @@ const FuturisticHero = () => {
                     transition={{ duration: 0.5 }}
                     className="relative mb-6"
                 >
-                    <div className="bg-black/50 backdrop-blur-md border border-purple-500/50 rounded-full px-6 py-2 inline-block">
+                    <div className="bg-black/50 backdrop-blur-md border-neon-gold rounded-full px-6 py-2 inline-block">
                         <AnimatedText
 
                             direction="up"
                             delay={0.1}
-                            className="text-base md:text-lg font-medium text-white tracking-widest"
+                            className="text-base md:text-lg font-medium text-neon-gold tracking-widest"
                         >{brand.name.toUpperCase()}</AnimatedText>
                     </div>
 
                     {/* Decorative Elements */}
-                    <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 h-px w-10 bg-gradient-to-r from-purple-600 to-transparent"></div>
-                    <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 h-px w-10 bg-gradient-to-l from-purple-600 to-transparent"></div>
+                    <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 h-px w-10 bg-gradient-to-r from-neon-gold-400 to-transparent"></div>
+                    <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 h-px w-10 bg-gradient-to-l from-neon-gold-400 to-transparent"></div>
                 </motion.div>
 
                 {/* Main Heading with Glitch Effect */}
@@ -114,30 +114,30 @@ const FuturisticHero = () => {
         text=""
         direction="up"
         delay={0.5}
-        className="relative z-10 text-emerald-400 font-semibold"
+        className="relative z-10 text-neon-gold-300 font-semibold"
         type="span"
     >Sell,</AnimatedText>
-    <div className="absolute inset-0 bg-emerald-400/20 blur-lg"></div>
+    <div className="absolute inset-0 bg-neon-gold-300/20 blur-lg"></div>
   </span>{" "}
                         <span className="relative inline-block">
     <AnimatedText
         text=""
         direction="up"
         delay={0.55}
-        className="relative z-10 text-cyan-400 font-semibold"
+        className="relative z-10 text-neon-white font-semibold"
         type="span"
     >Track,</AnimatedText>
-    <div className="absolute inset-0 bg-cyan-400/20 blur-lg"></div>
+    <div className="absolute inset-0 bg-white/20 blur-lg"></div>
   </span>{" "}
                         <span className="relative inline-block">
     <AnimatedText
         text=""
         direction="up"
         delay={0.6}
-        className="relative z-10 text-amber-400 font-semibold"
+        className="relative z-10 text-neon-gold-400 font-semibold"
         type="span"
     >and Follow Up</AnimatedText>
-    <div className="absolute inset-0 bg-amber-400/20 blur-lg"></div>
+    <div className="absolute inset-0 bg-neon-gold-400/20 blur-lg"></div>
   </span>{" "}
                         <span className="relative inline-block">
     <AnimatedText
@@ -153,10 +153,10 @@ const FuturisticHero = () => {
         text=""
         direction="up"
         delay={0.7}
-        className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-purple-300 font-bold"
+        className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-neon-gold-300 via-white to-neon-gold-400 font-bold"
         type="span"
     >Your Business</AnimatedText>
-    <div className="absolute inset-0 bg-purple-500/30 blur-xl"></div>
+    <div className="absolute inset-0 bg-neon-gold-400/30 blur-xl"></div>
   </span>
                     </h1>
 
@@ -166,7 +166,7 @@ const FuturisticHero = () => {
                         initial={{ width: 0, opacity: 0 }}
                         animate={{ width: "100%", opacity: 1 }}
                         transition={{ duration: 1, delay: 1 }}
-                        className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mt-4"
+                        className="h-px bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent mt-4 shadow-neon-gold"
                     />
                 </motion.div>
 
@@ -188,12 +188,12 @@ const FuturisticHero = () => {
                             text=""
                             direction="up"
                             delay={1}
-                            className="text-purple-200 font-medium"
+                            className="text-neon-gold-200 font-medium"
                         >We Build Sites That Sell, Save Time, and Automate Growth</AnimatedText>
                     </p>
 
                     {/* Decorative Elements */}
-                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 h-px w-20 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 h-px w-20 bg-gradient-to-r from-transparent via-neon-gold-400 to-transparent shadow-neon-gold"></div>
                 </motion.div>
 
                 {/* CTA Button with Futuristic Design */}
@@ -212,10 +212,10 @@ const FuturisticHero = () => {
                         className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-10 py-4"
                     >
                         {/* Button Background */}
-                        <span className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800"></span>
+                        <span className="absolute inset-0 bg-gradient-to-br from-neon-gold-500 to-neon-gold-700"></span>
 
                         {/* Button Glow Effect */}
-                        <span className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                        <span className="absolute inset-0 bg-gradient-to-br from-neon-gold-400 to-neon-gold-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
                         {/* Button Border */}
                         <span className="absolute inset-px rounded-full bg-black"></span>
@@ -226,7 +226,7 @@ const FuturisticHero = () => {
                   text=""
                   direction="up"
                   delay={1.3}
-                  className="text-white font-medium tracking-wider"
+                  className="text-neon-white font-medium tracking-wider"
               >INQUIRE</AnimatedText>
 
                             {/* Arrow Animation */}
@@ -234,7 +234,7 @@ const FuturisticHero = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                className="w-5 h-5 text-white"
+                                className="w-5 h-5 text-neon-white"
                                 initial={{ x: 0 }}
                                 animate={{ x: [0, 5, 0] }}
                                 transition={{ repeat: Infinity, duration: 1.5, repeatType: "loop" }}
@@ -245,7 +245,7 @@ const FuturisticHero = () => {
                     </motion.button>
 
                     {/* Button Reflection */}
-                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-purple-600/20 blur-xl rounded-full"></div>
+                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-neon-gold-400/20 blur-xl rounded-full"></div>
                 </motion.div>
             </div>
 

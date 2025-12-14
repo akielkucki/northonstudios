@@ -66,7 +66,7 @@ const VideoCard = () => {
                 borderRadius: videoBorderRadius,
                 overflow: "hidden",
             }}
-            className="relative w-full md:w-auto shadow-[0_5px_35px_rgba(137,0,157,1)] ring-2 ring-purple-900"
+            className="relative w-full md:w-auto shadow-[0_5px_35px_rgba(251,191,36,1)] ring-2 ring-neon-gold-600"
         >
             <motion.video
                 src="/herovideo.mp4"

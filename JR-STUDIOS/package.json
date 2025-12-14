@@ -18,7 +18,7 @@
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.7",
-    "next": "15.1.7",
+    "next": "16.1.0-canary.17",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
